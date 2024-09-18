@@ -1,0 +1,37 @@
+header {
+  background-color: rgb(235 238 254);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 242px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 45px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  img {
+    height: 70px;
+    width: 70px;
+  }
+  span {
+    font-size: 24px;
+  }
+}
+
+input {
+    width: 989px;
+    height: 70px;
+    padding: 17px, 45px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 42px;
+    border: none;
+    font-size: 24px;
+    font-weight: 400;
+}
