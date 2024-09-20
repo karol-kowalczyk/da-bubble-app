@@ -1,0 +1,40 @@
+@import '../../../../styles.scss';
+
+* {
+    background-color: $bgColor;
+    font-family: 'Nunito';
+}
+
+section {
+    padding: 44px 36px 0 36px;
+    display: flex;
+    justify-content: space-between;
+    .title-img-div {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .title {
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        img {
+            cursor: pointer;
+        }
+    }
+    .new-user-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+        .new-user-question {
+            font-size: 18px;
+        }
+        .create-user-link {
+            cursor: pointer;
+            color: $purple2;
+            text-decoration: none;
+        }
+    }
+}

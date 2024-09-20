@@ -1,6 +1,30 @@
-<section>
+<app-login-header></app-login-header>
+<form action="">
+    <h1>Anmeldung</h1>
+
+    <div>Wir empfehlen dir, die E-Mail-Adresse zu nutzen, die du bei der Arbeit verwendest.</div>
+
+
+        <input type="email" placeholder="beispielname@email.com">
+        <input type="password" placeholder="Passwort">
+
+    <a href="">Passwort vergessen?</a>
+
     <div>
-        <img src="assets/img/login-site-logo-top-left-corner.svg" alt="logo" srcset="">
-        <div class="title">DABubble</div>
+        <div class="border-bottom-purple-light"></div>
+        <div>ODER</div>
+        <div class="border-bottom-purple-light"></div>
     </div>
-</section>
+
+    <div class="login-with-google-div">
+        <img src="assets/img/google.svg" alt="google">
+        <div>Anmelden mit Google</div>
+    </div>
+
+    <div>
+        <button>Anmelden</button>
+        <button>Gäste-Login</button>
+    </div>
+</form>
+
+<app-login-footer></app-login-footer>

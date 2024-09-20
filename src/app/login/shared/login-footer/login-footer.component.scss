@@ -1,0 +1,21 @@
+@import '../../../../styles.scss';
+
+* {
+    background-color: $bgColor;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        margin: 10px 15px 10px 15px;
+        font-size: 18px;
+        color: $purple2;
+        font-family: 'Figtree';
+    } &:hover {
+        font-weight: bold;
+    }
+}
