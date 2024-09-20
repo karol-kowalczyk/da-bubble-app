@@ -25,41 +25,47 @@ header {
 }
 
 input {
-    width: 50%;
-    padding: 17px 45px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-radius: 42px;
-    border: none;
-    font-size: 24px;
-    font-weight: 400;
+  width: 50%;
+  padding: 17px 45px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 42px;
+  border: none;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .profil {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-right: 45px;
-    span {
-        font-size: 32px;
-        font-weight: 700;
-        width: 200px;
-        margin-left: 45px;
-    }
-    .profilImg {
-        height: 70px;
-        width: 70px;
-        border-radius: 42px;
-    }
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 35px;
+  span {
+    font-size: 32px;
+    font-weight: 700;
+    width: 200px;
+    margin-left: 45px;
+  }
+  .profilImg {
+    height: 70px;
+    width: 70px;
+    border-radius: 42px;
+  }
 }
 
 .dropDownIcon {
   height: 30px;
   width: 30px;
-  filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(234deg) brightness(105%) contrast(101%);
+  object-fit: cover;
+  border-radius: 42px;
+  padding: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
 }
 
 button {
-  background-color: unset;
   border: none;
+  background-color: unset;
 }
