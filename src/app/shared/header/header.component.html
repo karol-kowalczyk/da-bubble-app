@@ -1,0 +1,33 @@
+<header>
+  <div class="logo">
+    <img src="./../../../../assets/img/header/logo.png" alt="" />
+    <span>DABubble</span>
+  </div>
+  <input type="text" placeholder="Devspace durchsuchen" />
+  <div class="profil">
+    <span>Frederik Beck</span>
+    <img
+      class="profilImg"
+      src="./../../../../assets/img/header/avatar1.png"
+      alt=""
+    />
+    <button (click)="openDialogToggle($event)">
+      <img
+        class="dropDownIcon"
+        src="./../../../../assets/img/header/keyboard_arrow_down.png"
+        alt=""
+      />
+    </button>
+  </div>
+
+  <div
+    (click)="openDialogToggle($event)"
+    id="openDialogHeader"
+    class="dialogHeaderContainer displayNone"
+  >
+    <div (click)="$event.stopPropagation()" class="dialogHeader">
+      <span (click)="testdd()">Profil</span>
+      <span>Log out</span>
+    </div>
+  </div>
+</header>

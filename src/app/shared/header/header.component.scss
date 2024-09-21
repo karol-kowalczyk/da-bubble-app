@@ -39,7 +39,7 @@ input {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding-right: 35px;
+  padding-right: 45px;
   span {
     font-size: 32px;
     font-weight: 700;
@@ -58,14 +58,48 @@ input {
   width: 30px;
   object-fit: cover;
   border-radius: 42px;
-  padding: 10px;
   &:hover {
     cursor: pointer;
-    background-color: rgba($color: #000000, $alpha: 0.1);
+    filter: invert(31%) sepia(49%) saturate(5283%) hue-rotate(232deg) brightness(98%) contrast(89%);
   }
 }
 
 button {
   border: none;
   background-color: unset;
+}
+
+.dialogHeader {
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  width: 282px;
+  height: 181px;
+  border-radius: 30px 0 30px 30px;
+  padding: 30px;
+  gap: 15px;
+  background-color: #ffffff;
+  box-shadow: 6px 0px 20px grey;
+}
+
+.dialogHeaderContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayUnset {
+  display: unset;
 }
