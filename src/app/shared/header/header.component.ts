@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  openDialogToggle(event: Event) {
+  openDialog(event: Event) {
     let container = document.getElementById('openDialogHeader');
-  
+    let dialog = document.getElementById('openDialogProfile');
     if (container) {
       if (container.classList.contains('displayUnset')) {
         container.classList.remove('displayUnset');
@@ -20,9 +20,19 @@ export class HeaderComponent {
         container.classList.add('displayUnset');
       }
     }
+
+    if (dialog) {
+      dialog.classList.add('displayNone'),
+        dialog.classList.remove('displayFlex');
+    }
   }
 
-  testdd() {
-    console.log('Hat geklappt');
+  openDialogProfile() {
+    let dialog = document.getElementById('openDialogProfile');
+
+    if (dialog) {
+      dialog.classList.remove('displayNone');
+      dialog.classList.add('displayUnset');
     }
+  }
 }
