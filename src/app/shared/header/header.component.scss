@@ -149,6 +149,12 @@ button {
   height: 24px;
   width: 24px;
   object-fit: cover;
+  padding: 10px;
+  border-radius: 50px;
+  &:hover {
+    cursor: pointer;
+    background-color: #eceefe;
+  }
 }
 
 .profilPic {
@@ -173,6 +179,10 @@ button {
   font-size: 18px;
   font-weight: 600px;
   color: #535af1;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 .status {

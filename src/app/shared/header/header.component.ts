@@ -8,6 +8,24 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+
+
+closeDialog() {
+  let container = document.getElementById('openDialogHeader');
+    let dialog = document.getElementById('openDialogProfile');
+
+    if (dialog) {
+      dialog.classList.add('displayNone'),
+        dialog.classList.remove('displayFlex');
+        dialog.classList.remove('displayUnset');
+    }
+
+    if (container) {
+      container.classList.add('displayNone'),
+        container.classList.remove('displayUnset');
+    }
+}
+
   openDialog(event: Event) {
     let container = document.getElementById('openDialogHeader');
     let dialog = document.getElementById('openDialogProfile');
