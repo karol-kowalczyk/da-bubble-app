@@ -1,0 +1,37 @@
+<app-login-logo></app-login-logo>
+<main>
+    <section>
+        <form action="">
+            <div class="header-div">
+                <img src="assets/img/return.svg" alt="return">
+                <h1>Konto erstellen</h1>
+                <img class="little-img" src="assets/img/return-white.svg" alt="return">
+            </div>
+
+            <div class="subheader">Mit deinem Namen und deiner E-Mail-Adresse hast du dein neues DABubble-Konto.</div>
+
+            <input type="text" placeholder="Name und Nachname">
+            <div class="wrong-data">Falsche E-Mail oder falsches Passwort.</div>
+
+            <input type="email" placeholder="beispielname@email.com">
+            <div class="wrong-data">Diese E-Mail Adresse ist ungültig</div>
+
+            <input type="password" placeholder="Passwort">
+            <div class="wrong-data">Falsche E-Mail oder falsches Passwort.</div>
+
+            <form>
+                <label for="exampleCheckbox">
+                    <input type="checkbox" id="exampleCheckbox" name="terms">
+                    Ich stimme der
+                    <a routerLink="" href="">Datenschutzerklärung</a>
+                    zu.</label>
+
+            </form>
+
+            <div class="login-btn-div">
+                <button class="login-btn">Weiter</button>
+            </div>
+        </form>
+    </section>
+</main>
+<app-login-footer></app-login-footer>

@@ -1,0 +1,37 @@
+@import '../../../../styles.scss';
+
+* {
+    background-color: $bgColor;
+    font-family: 'Nunito';
+}
+
+section {
+    padding: 44px 36px 0 36px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 450px) { 
+        justify-content: center;
+    }
+
+    .title-img-div {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .title {
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    @media (max-width: 900px) { 
+        padding: 44px 36px 44px 36px;
+    }
+}
