@@ -8,14 +8,27 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    // padding: 24px;
     a {
         text-decoration: none;
+        font-weight: 100;
         cursor: pointer;
-        margin: 10px 15px 10px 15px;
+        padding: 10px 15px 10px 15px;
         font-size: 18px;
         color: $purple2;
         font-family: 'Figtree';
-    } &:hover {
-        font-weight: bold;
+        &:hover {
+            font-weight: 500;
+            border: 1px solid $purple2;
+            border-radius: 25px;
+        }
+    }
+
+    @media (max-width: 1800px) {
+        padding: 24px;
+    }
+
+    @media (max-width: 450px) { 
+            display: none;
     }
 }

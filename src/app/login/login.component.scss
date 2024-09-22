@@ -3,26 +3,234 @@
 * {
     background-color: $bgColor;
     font-family: 'Nunito';
-    // height: 100vh;
 }
 
-form {
+:host {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    a {
-        cursor: pointer;
-        color: $purple2;
-        text-decoration: none;
-    }
-
-    .login-with-google-div {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+    height: 100vh;
 }
 
-.border-bottom-purple-light {
-    border-bottom: 1px solid #ADB0D9;
+main {
+    flex-shrink: 0;
+}
+
+app-login-footer {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        border-radius: 30px;
+        width: 40%;
+
+        h1,
+        div,
+        input,
+        a {
+            background-color: white;
+        }
+
+        .subheader {
+            text-align: center;
+            display: flex;
+            padding: 0 40px;
+        }
+
+        input {
+            margin-top: 16px;
+            margin-bottom: 4px;
+            border-radius: 100px;
+            padding: 18px 32px;
+            background-color: $bgColor;
+            width: 55%; // Ursprüngliche Breite für große Bildschirme
+            height: 16px;
+            border: none;
+            padding-left: 60px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            background-repeat: no-repeat;
+            background-position: 16px center;
+            background-size: 20px 20px;
+        }
+
+        input[type="email"] {
+            background-image: url('/assets/img/mail.svg');
+        }
+
+        input[type="password"] {
+            background-image: url('/assets/img/lock.svg');
+        }
+
+        input::placeholder {
+            text-indent: 0px;
+        }
+
+        .wrong-data {
+            color: red;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            width: 63%;
+            text-align: left;
+        }
+
+        h1 {
+            color: $purple1;
+            font-size: 46px;
+            padding: 16px 0;
+        }
+
+        .forgot-password {
+            cursor: pointer;
+            color: $purple2;
+            text-decoration: none;
+            font-weight: 300;
+            margin: 20px 0 30px;
+
+            &:hover {
+                font-weight: 600;
+                background-color: $bgColor;
+                border-radius: 25px;
+                padding: 8px;
+            }
+        }
+
+        .or-div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 50%;
+            margin-bottom: 30px;
+
+            .border-bottom-purple-light {
+                border-bottom: 1px solid #ADB0D9;
+                width: 100%;
+            }
+
+            .or-text {
+                margin-right: 8px;
+                margin-left: 8px;
+                padding: 0 10px;
+            }
+        }
+
+        .login-with-google-div {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: $bgColor;
+            padding: 11px 32px;
+            border-radius: 100px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            color: $purple2;
+            text-decoration: none;
+
+            &:hover {
+                font-weight: 700;
+                border: 1px solid $purple2;
+            }
+
+            div {
+                background-color: $bgColor;
+            }
+        }
+
+        button {
+            cursor: pointer;
+            width: 136px;
+            height: 48px;
+            font-size: 18px;
+            font-weight: 400;
+            border-radius: 25px;
+        }
+
+        .login-btn-div {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 30px;
+
+            .login-btn {
+                background-color: $purple1;
+                border: none;
+                color: white;
+
+                &:hover {
+                    background-color: $purple2;
+                }
+            }
+
+            .guest-login {
+                color: $purple1;
+                border: 1px solid $purple2;
+                transition: background-color 0.5s ease, color 0.5s ease;
+
+                &:hover {
+                    background-color: $purple1;
+                    color: white;
+                }
+            }
+        }
+
+        @media (max-width: 900px) {
+            width: 70%;
+
+            input {
+                width: 60%;
+            }
+
+            .subheader {
+                padding: 0 48px;
+            }
+
+            .or-div {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            width: 90%;
+
+            input {
+                width: 60%;
+                padding: 18px 60px;
+            }
+
+            input::placeholder {
+                text-indent: 0px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .login-btn-div {
+                border-radius: 30px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            input {
+                padding: 18px 30px 18px 60px;
+            }
+
+            button {
+                width: 95%;
+            }
+        }
+
+    }
 }
