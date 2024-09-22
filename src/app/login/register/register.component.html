@@ -1,37 +1,47 @@
 <app-login-logo></app-login-logo>
 <main>
-    <section>
-        <form action="">
-            <div class="header-div">
-                <img src="assets/img/return.svg" alt="return">
-                <h1>Konto erstellen</h1>
-                <img class="little-img" src="assets/img/return-white.svg" alt="return">
-            </div>
+  <section>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <div class="header-div">
+        <img src="assets/img/return.svg" alt="return">
+        <h1>Konto erstellen</h1>
+        <img class="little-img" src="assets/img/return-white.svg" alt="return">
+      </div>
 
-            <div class="subheader">Mit deinem Namen und deiner E-Mail-Adresse hast du dein neues DABubble-Konto.</div>
+      <div class="subheader">
+        Mit deinem Namen und deiner E-Mail-Adresse hast du dein neues DABubble-Konto.
+      </div>
 
-            <input type="text" placeholder="Name und Nachname">
-            <div class="wrong-data">Falsche E-Mail oder falsches Passwort.</div>
+      <input type="text" placeholder="Name und Nachname" formControlName="fullName" required (focus)="hideError()">
+      <div class="wrong-data" *ngIf="registerForm.get('fullName')?.invalid && registerForm.get('fullName')?.touched">
+        Bitte geben Sie Ihren Namen ein.
+      </div>
 
-            <input type="email" placeholder="beispielname@email.com">
-            <div class="wrong-data">Diese E-Mail Adresse ist ungültig</div>
+      <input type="email" placeholder="beispielname@email.com" formControlName="email" required (focus)="hideError()">
+      <div class="wrong-data" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+        Diese E-Mail-Adresse ist ungültig.
+      </div>
 
-            <input type="password" placeholder="Passwort">
-            <div class="wrong-data">Falsche E-Mail oder falsches Passwort.</div>
+      <input type="password" placeholder="Passwort" formControlName="password" required (focus)="hideError()">
+      <div class="wrong-data" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+        Das Passwort muss mindestens 6 Zeichen lang sein.
+      </div>
 
-            <form>
-                <label for="exampleCheckbox">
-                    <input type="checkbox" id="exampleCheckbox" name="terms">
-                    Ich stimme der
-                    <a routerLink="" href="">Datenschutzerklärung</a>
-                    zu.</label>
+      <label for="terms">
+        <input type="checkbox" id="terms" formControlName="terms" required>
+        Ich stimme der <a routerLink="/datenschutz">Datenschutzerklärung</a> zu.
+      </label>
+      <div class="wrong-data" *ngIf="registerForm.get('terms')?.invalid && registerForm.get('terms')?.touched">
+        Sie müssen den Bedingungen zustimmen.
+      </div>
 
-            </form>
+      <div class="login-btn-div">
+        <button class="login-btn" type="submit">Weiter</button>
+      </div>
 
-            <div class="login-btn-div">
-                <button class="login-btn">Weiter</button>
-            </div>
-        </form>
-    </section>
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+      <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+    </form>
+  </section>
 </main>
 <app-login-footer></app-login-footer>
