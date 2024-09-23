@@ -2,7 +2,7 @@
     background-color: white;
     padding: 16px;
     border-radius: 24px;
-    max-width: 30%;
+    max-width: 20%;
     height: 100vh;
     margin: 16px;
 
@@ -77,12 +77,18 @@
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    margin-left: 32px;
     gap: 10px;
     position: relative;
+    padding: 8px 24px 8px 24px;
+    &:hover {
+        background-color: #ECEFFF;
+        border-radius: 32px;
+    }
 
     .poa4 {
         position: absolute;
-        left: 35px;
-        top: 35px;
+        left: 63px;
+        top: 43px;
     }
 }
