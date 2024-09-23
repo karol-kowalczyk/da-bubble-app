@@ -9,6 +9,6 @@ export const routes: Routes = [
     {path: '', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'create-profile', component: ChooseProfilePictureComponent},
-    {path: 'reset-password', component: ResetPasswordComponent},
+    {path: 'forgot-password', component: ResetPasswordComponent},
     {path: 'choose-new-password', component: ChooseNewPasswordComponent},
 ];

@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { auth, signInWithEmailAndPassword } from './firebase/firebase-config';
 import { FirebaseError } from 'firebase/app';
 import { LoginHeaderComponent } from './shared/login-header/login-header.component';
@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -19,7 +20,8 @@ import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
     LoginHeaderComponent,
     LoginFooterComponent,
     ResponsiveCreateUserSectionComponent,
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
@@ -58,7 +60,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       this.errorMessage = null;
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/forgot-password']);
     } catch (error) {
       if (error instanceof FirebaseError) {
         switch (error.code) {
