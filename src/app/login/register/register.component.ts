@@ -48,8 +48,6 @@ export class RegisterComponent {
       await sendEmailVerification(user as User);
       this.successMessage = 'Registrierung erfolgreich! Eine Bestätigungs-E-Mail wurde an Ihre E-Mail-Adresse gesendet.';
       this.errorMessage = null;
-      // Optional: Speichern Sie den vollständigen Namen in Ihrer Datenbank
-      // this.saveUserName(user.uid, fullName);
       setTimeout(() => this.router.navigate(['/']), 2000);
     } catch (error) {
       if (error instanceof FirebaseError) {

@@ -8,6 +8,7 @@ import { LoginFooterComponent } from './shared/login-footer/login-footer.compone
 import { Renderer2 } from '@angular/core';
 import { ResponsiveCreateUserSectionComponent } from './shared/responsive-create-user-section/responsive-create-user-section.component';
 import { CommonModule } from '@angular/common';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 
 @Component({
@@ -78,5 +79,22 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   hideError() {
     this.errorMessage = null;
+  }
+
+  async onGoogleLogin(event: Event) {
+    event.preventDefault(); // Verhindert das Standardverhalten des Links
+  
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      this.errorMessage = null;
+      this.router.navigate(['/dashboard']);
+    } catch (error) {
+      if (error instanceof FirebaseError) {
+        this.errorMessage = 'Anmeldung mit Google fehlgeschlagen. Bitte versuchen Sie es erneut.';
+      } else {
+        this.errorMessage = 'Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
+      }
+    }
   }
 }
