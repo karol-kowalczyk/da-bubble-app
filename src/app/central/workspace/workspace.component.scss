@@ -1,0 +1,105 @@
+.workspace-container {
+    background-color: white;
+    padding: 16px;
+    border-radius: 24px;
+    max-width: 20vw;
+    min-width: 20vw;
+    height: 90vh;
+    margin: 16px;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+.devspace-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.devspace-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 10px;
+    position: relative;
+
+    p {
+        font-size: 18;
+    }
+
+    .bold {
+        font-weight: 700;
+    }
+
+    .poa1 {
+        position: absolute;
+        left: -50px;
+    }
+
+    .poa2 {
+        position: absolute;
+        right: -50px;
+    }
+
+    .poa3 {
+        position: absolute;
+        left: -50px;
+    }
+}
+
+.headline-sub {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.workspace-flag {
+    position: absolute;
+    left: -110px;
+    top: 70%;
+    background-color: white;
+    rotate: 270deg;
+    padding: 14px 23px 14px 23px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+
+    img {
+        rotate: 90deg;
+    }
+}
+
+
+.users {
+    margin-bottom: 40px;
+    margin-left: 32px;
+    position: relative;
+
+    .poa4 {
+        position: absolute;
+        left: 63px;
+        top: 43px;
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 24px 8px 24px;
+
+    &:hover {
+        background-color: #ECEFFF;
+        border-radius: 32px;
+    }
+}
