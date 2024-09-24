@@ -50,13 +50,14 @@ body.login-page {
     overflow-y: hidden;
     height: 100vh;
     background-color: $bgColor;
-    @media (max-width: 990px) {
-        overflow-y: auto;
-    }
+    // @media (max-width: 990px) {
+    //     overflow-y: auto;
+    // }
 }
 
 .d-none {
     display: none;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
