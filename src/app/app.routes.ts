@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { CentralComponent } from './central/central.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-    { path: '', component: CentralComponent },
+    {path: '', component: LoginComponent},
 ];
