@@ -1,27 +1,27 @@
 <div class="workspace-container">
     <div class="devspace-header">
         <img src="assets/workspace/devspace.png" alt="">
-        <img class="pointer" src="assets/workspace/edit1.png" alt="">
+        <img class="edit pointer hover-color" src="assets/workspace/edit1.png" alt="">
     </div>
     <div class="devspace-content">
         <div class="channels">
             <div class="headline">
-                <div class="headline-sub pointer hover-color">
+                <div class="headline-sub pointer hover-color menu-item " (click)="toggleMenu()">
                     <img class="poa1" src="assets/workspace/arrow_drop_down.png" alt="">
                     <img src="assets/workspace/workspaces.png" alt="">
                     <p>Channel</p>
                 </div>
                 <img class="poa2 pointer" src="assets/workspace/add.png" alt="">
             </div>
-            <div class="headline pointer hover-color">
+            <div class="headline pointer hover-color menu-item " *ngIf="isMenuVisible">
                 <img src="assets/workspace/tag.png" alt="">
                 <p>Entwickerteam</p>
             </div>
-            <div class="headline pointer hover-color">
+            <div class="headline pointer hover-color menu-item " *ngIf="isMenuVisible">
                 <img src="assets/workspace/add_circle.png" alt="">
                 <p>Channels hinzufügen</p>
             </div>
-            <div class="headline pointer hover-color">
+            <div class="headline pointer hover-color content">
                 <img class="poa3" src="assets/workspace/arrow_drop_down.png" alt="">
                 <img src="assets/workspace/account_circle.png" alt="">
                 <p class="bold">Direktnachrichten</p>

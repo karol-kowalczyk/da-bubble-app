@@ -1,3 +1,12 @@
+.menu-item {
+    transition: all 0.3s ease;
+}
+
+.content {
+    overflow: hidden;
+    /* Wichtig für die Animation */
+}
+
 .workspace-container {
     background-color: white;
     padding: 16px;
@@ -13,6 +22,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.edit {
+    &:hover {
+        /* background-color: #ECEFFF; */
+        border-radius: 32px;
+    }
 }
 
 .hover-color {
