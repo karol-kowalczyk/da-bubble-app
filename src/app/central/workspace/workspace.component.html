@@ -6,7 +6,7 @@
     <div class="devspace-content">
         <div class="channels">
             <div class="headline">
-                <div class="headline-sub pointer hover-color menu-item " (click)="toggleMenu()">
+                <div class="headline-sub pointer hover-color menu-item" (click)="toggleMenu()">
                     <img class="poa1" src="assets/workspace/arrow_drop_down.png" alt="">
                     <img src="assets/workspace/workspaces.png" alt="">
                     <p>Channel</p>
@@ -21,14 +21,14 @@
                 <img src="assets/workspace/add_circle.png" alt="">
                 <p>Channels hinzufügen</p>
             </div>
-            <div class="headline pointer hover-color content">
+            <div class="headline pointer hover-color content" (click)="toggleDirectMenu()">
                 <img class="poa3" src="assets/workspace/arrow_drop_down.png" alt="">
                 <img src="assets/workspace/account_circle.png" alt="">
                 <p class="bold">Direktnachrichten</p>
             </div>
         </div>
         <div>
-            <div class="users">
+            <div class="users" *ngIf="isDirectMenuVisible">
                 <div class="user pointer">
                     <img src="assets/avatars/Avatar 1.png" alt="">
                     <img class="poa4" src="assets/avatars/Online.png" alt="">
