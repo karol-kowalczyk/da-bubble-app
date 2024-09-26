@@ -48,3 +48,28 @@ body {
 }
 
 html { height: 100%; }
+
+.primary-btn {
+  color: white;
+  background-color: #454CF2;
+  padding: 12px 25px 12px 25px;
+  gap: 10px;
+  border-radius: 25px;
+  border: none;
+  &:hover {
+    background-color: #797EF3;
+  }
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #454CF2;
+  padding: 12px 25px 12px 25px;
+  gap: 10px;
+  border-radius: 25px;
+  border: 1px solid #454CF2;
+  &:hover {
+    background-color: #797EF3;
+    color: white;
+  }
+}

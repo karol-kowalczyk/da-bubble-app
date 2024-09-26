@@ -1,10 +1,10 @@
 .mat-dialog-container {
     display: flex;
-    
     align-items: center;
     flex-wrap: wrap;
     padding: 24px;
     font-family: Nunito !important;
+    background-color: white;
 }
 
 h1 {
@@ -15,10 +15,12 @@ h1 {
 h2 {
     font-size: 18px;
     font-weight: 700;
+    margin-bottom: 0 !important;
 }
 
-.form {
-    width: 500px
+.not-bold {
+    font-weight: 400;
+    color: #686969;
 }
 
 input {
@@ -27,7 +29,7 @@ input {
     margin-top: 25px;
     margin-bottom: 25px;
     border-radius: 42px;
-    border: solid;
+    border: solid lightgray;
     font-size: 18px;
     font-weight: 400;
 }
@@ -62,3 +64,42 @@ input {
     height: 20px;
     /* Höhe des Bildes */
 }
+
+.input-container2 {
+    position: relative;
+    width: 500px;
+}
+
+.input-container2 input {
+    width: 100%;
+    padding-left: 40px;
+    /* Platz für das Bild */
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.input-container2::before {
+    content: '';
+    /* Pfad zu deinem Bild */
+    background-size: 16px 16px;
+    /* Größe des Bildes */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 10px;
+    /* Abstand vom linken Rand */
+    top: 52%;
+    transform: translateY(-50%);
+    width: 20px;
+    /* Breite des Bildes */
+    height: 20px;
+    /* Höhe des Bildes */
+}
+
+/* .primary-btn {
+    color: white;
+    background-color: #454CF2;
+    padding: 12px 25px 12px 25px;
+    gap: 10px;
+    border-radius: 25px;
+    border: none;
+} */
