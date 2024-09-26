@@ -35,19 +35,39 @@ $da-bubble-theme: mat.define-theme((
 // Comment out the line below if you want to use the deprecated `color` inputs.
 // @include mat.color-variants-backwards-compatibility($da-bubble-theme);
 
-@import'../public/assets/fonts/nunito-v26-latin/nunito-font.scss';
+/* You can add global styles to this file, and also import other style files */
+@import '../public/assets/fonts/nunito-v26-latin/nunito-font.scss';
+@import '../public/assets/fonts/figtree-v5-latin/figtree-font.scss';
 
-body {
+$purple1: #444DF2;
+$purple2: #797EF3;
+$bgColor: #ECEEFE;
+
+* {
     margin: 0;
     background-color: #ECEFFF;
     font-family: Nunito, sans-serif;
 }
 
+body.login-page {
+    overflow-y: hidden;
+    height: 100vh;
+    background-color: $bgColor;
+    // @media (max-width: 990px) {
+    //     overflow-y: auto;
+    // }
+}
+
+.d-none {
+    display: none;
+}
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 .pointer {
     cursor: pointer;
 }
-
-html { height: 100%; }
 
 .primary-btn {
   color: white;
