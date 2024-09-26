@@ -34,6 +34,7 @@ $da-bubble-theme: mat.define-theme((
 
 // Comment out the line below if you want to use the deprecated `color` inputs.
 // @include mat.color-variants-backwards-compatibility($da-bubble-theme);
+
 /* You can add global styles to this file, and also import other style files */
 @import '../public/assets/fonts/nunito-v26-latin/nunito-font.scss';
 @import '../public/assets/fonts/figtree-v5-latin/figtree-font.scss';
@@ -44,6 +45,8 @@ $bgColor: #ECEEFE;
 
 * {
     margin: 0;
+    background-color: #ECEFFF;
+    font-family: Nunito, sans-serif;
 }
 
 body.login-page {
@@ -66,3 +69,27 @@ body.login-page {
     cursor: pointer;
 }
 
+.primary-btn {
+  color: white;
+  background-color: #454CF2;
+  padding: 12px 25px 12px 25px;
+  gap: 10px;
+  border-radius: 25px;
+  border: none;
+  &:hover {
+    background-color: #797EF3;
+  }
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #454CF2;
+  padding: 12px 25px 12px 25px;
+  gap: 10px;
+  border-radius: 25px;
+  border: 1px solid #454CF2;
+  &:hover {
+    background-color: #797EF3;
+    color: white;
+  }
+}
