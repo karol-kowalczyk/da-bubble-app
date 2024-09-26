@@ -1,0 +1,64 @@
+.mat-dialog-container {
+    display: flex;
+    
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 24px;
+    font-family: Nunito !important;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form {
+    width: 500px
+}
+
+input {
+    width: 50%;
+    padding: 17px 45px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 42px;
+    border: solid;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.input-container {
+    position: relative;
+    width: 500px;
+}
+
+.input-container input {
+    width: 100%;
+    padding-left: 40px;
+    /* Platz für das Bild */
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.input-container::before {
+    content: '';
+    background-image: url('/assets/workspace/tag-grey.png');
+    /* Pfad zu deinem Bild */
+    background-size: 16px 16px;
+    /* Größe des Bildes */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 10px;
+    /* Abstand vom linken Rand */
+    top: 52%;
+    transform: translateY(-50%);
+    width: 20px;
+    /* Breite des Bildes */
+    height: 20px;
+    /* Höhe des Bildes */
+}

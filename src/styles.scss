@@ -34,14 +34,17 @@ $da-bubble-theme: mat.define-theme((
 
 // Comment out the line below if you want to use the deprecated `color` inputs.
 // @include mat.color-variants-backwards-compatibility($da-bubble-theme);
+
+@import'../public/assets/fonts/nunito-v26-latin/nunito-font.scss';
+
 body {
     margin: 0;
     background-color: #ECEFFF;
+    font-family: Nunito, sans-serif;
 }
 
 .pointer {
     cursor: pointer;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html { height: 100%; }
