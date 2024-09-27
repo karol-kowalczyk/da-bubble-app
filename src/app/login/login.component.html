@@ -1,6 +1,46 @@
-<section>
-    <div>
-        <img src="assets/img/login-site-logo-top-left-corner.svg" alt="logo" srcset="">
-        <div class="title">DABubble</div>
-    </div>
-</section>
+<app-login-header></app-login-header>
+<main>
+  <section>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <h1>Anmeldung</h1>
+
+      <div class="subheader">
+        Wir empfehlen dir, die E-Mail-Adresse zu nutzen, die du bei der Arbeit verwendest.
+      </div>
+
+      <input type="email" placeholder="beispielname@email.com"
+             formControlName="email" required (focus)="hideError()">
+      <div class="wrong-data" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        Diese E-Mail-Adresse ist ungültig.
+      </div>
+
+      <input type="password" placeholder="Passwort"
+             formControlName="password" required (focus)="hideError()">
+      <div class="wrong-data" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        Bitte geben Sie Ihr Passwort ein.
+      </div>
+
+      <div class="wrong-data" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+      <a class="forgot-password" routerLink="/forgot-password">Passwort vergessen?</a>
+
+      <div class="or-div">
+        <div class="border-bottom-purple-light"></div>
+        <div class="or-text">ODER</div>
+        <div class="border-bottom-purple-light"></div>
+      </div>
+
+      <a href="" class="login-with-google-div" (click)="onGoogleLogin($event)">
+        <img src="assets/img/google.svg" alt="google">
+        <div>Anmelden mit Google</div>
+      </a>
+
+      <div class="login-btn-div">
+        <button class="login-btn" type="submit">Anmelden</button>
+        <button class="guest-login" type="button">Gäste-Login</button>
+      </div>
+    </form>
+  </section>
+</main>
+<app-responsive-create-user-section></app-responsive-create-user-section>
+<app-login-footer></app-login-footer>

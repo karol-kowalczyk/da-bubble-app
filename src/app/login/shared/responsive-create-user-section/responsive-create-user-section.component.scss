@@ -1,0 +1,39 @@
+@import '../../../../styles.scss';
+
+* {
+    background-color: $bgColor;
+    font-family: 'Nunito';
+}
+
+section {
+    display: none;
+}
+
+@media (max-width: 450px) {
+    section {
+        padding: 44px 36px 44px 36px;
+        display: flex;
+        justify-content: center;
+    
+        .new-user-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+    
+            .new-user-question {
+                font-size: 18px;
+            }
+    
+            .create-user-link {
+                cursor: pointer;
+                color: $purple2;
+                text-decoration: none;
+                font-weight: 500;
+                border: 1px solid $purple2;
+                border-radius: 25px;
+                padding: 7px 18px 7px 18px;
+            }
+        }
+    }
+}
