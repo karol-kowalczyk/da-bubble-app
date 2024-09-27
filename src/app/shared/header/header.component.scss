@@ -33,6 +33,7 @@ input {
   border: none;
   font-size: 24px;
   font-weight: 400;
+  background-color: white;
 }
 
 .profil {
@@ -43,7 +44,7 @@ input {
   span {
     font-size: 32px;
     font-weight: 700;
-    width: 200px;
+    width: 210px;
     margin-left: 45px;
   }
   .profilImg {
@@ -143,6 +144,7 @@ button {
   gap: 38px;
   background-color: #ffffff;
   box-shadow: 6px 0px 20px grey;
+  z-index: 99;
 }
 
 .closeIcon {
@@ -221,4 +223,79 @@ button {
   font-weight: 500;
   color: #1381ff;
   padding-left: 35px;
+}
+
+.dialogEdit {
+  position: absolute;
+  display: flex;
+  right: 20px;
+  top: 120px;
+  flex-direction: column;
+  width: 450px;
+  height: 620px;
+  border-radius: 30px 0 30px 30px;
+  padding: 45px 40px;
+  gap: 38px;
+  background-color: #ffffff;
+  box-shadow: 6px 0px 20px grey;
+  z-index: 99;
+}
+
+.fontStyleEdit {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.fontStyleHeadline {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.centerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.centerJcContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.inputEdit {
+  border: 1px solid #adb0d9;
+  font-size: 18px;
+  width: 350px;
+  margin-top: 15px;
+}
+
+.buttonCancel, .buttonSave {
+  height: 49px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.buttonCancel {
+  border: 1px solid #797ef3;
+  width: 141px;
+  color: #797ef3;
+  &:hover {
+    background-color: #444df2;
+    color: white;
+  }
+}
+
+.buttonSave {
+  background-color: #444df2;
+  width: 133px;
+  color: white;
+  margin-left: 32px;
+  &:hover {
+    opacity: 0.7;
+  }
 }

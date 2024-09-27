@@ -36,8 +36,9 @@
       class="dialogProfile displayNone"
     >
       <div class="displayFlexBetween">
-        <span>Profil</span>
-        <img (click)="closeDialog()"
+        <span class="fontStyleHeadline">Profil</span>
+        <img
+          (click)="closeDialog()"
           class="closeIcon"
           src="./../../../../assets/img/header/close-2.png"
           alt=""
@@ -53,7 +54,7 @@
       <div class="containeInfo">
         <div class="displayFlexBetween">
           <span class="name">Frederik Beck</span>
-          <span class="edit">Bearbeiten</span>
+          <span (click)="openDialogEdit()" class="edit">Bearbeiten</span>
         </div>
         <div class="status">
           <img src="./../../../../assets/img/header/Online.png" alt="" />
@@ -65,6 +66,46 @@
           <span>E-Mail-Adresse</span>
         </div>
         <span class="emailAdress">fred.beck%email.com</span>
+      </div>
+    </div>
+
+    <div
+      (click)="$event.stopPropagation()"
+      id="openDialogEdit"
+      class="dialogEdit displayNone"
+    >
+      <div class="displayFlexBetween">
+        <span class="fontStyleHeadline">Dein Profil bearbeiten</span>
+        <img
+          (click)="closeDialog()"
+          class="closeIcon"
+          src="./../../../../assets/img/header/close-2.png"
+          alt=""
+        />
+      </div>
+      <div class="imgContainer">
+        <img
+          class="profilPic"
+          src="./../../../../assets/img/header/avatar1.png"
+          alt=""
+        />
+      </div>
+
+      <div class="editContainer">
+        <div class="centerContainer">
+          <img src="./../../../../assets/img/header/account_circle.png" alt="profilIcon" />
+          <span class="fontStyleEdit">Vollständiger Name</span>
+        </div>
+        <input class="inputEdit" type="text" placeholder="Frederik Beck" />
+        <div class="centerContainer">
+          <img src="./../../../../assets/img/header/mail.png" alt="emailIcon" />
+          <span class="fontStyleEdit">E-Mail-Adresse</span>
+        </div>
+        <input class="inputEdit" type="email" placeholder="fred.beck@email.com" />
+        <div class="centerJcContainer">
+          <button (click)="closeDialogEdit()" class="buttonCancel">Abbrechen</button>
+          <button class="buttonSave">Speichern</button>
+        </div>
       </div>
     </div>
   </div>
