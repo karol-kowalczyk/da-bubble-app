@@ -15,7 +15,7 @@
     width: 20vw;
     /* min-width: 20vw; */
     height: 90vh;
-    margin: 0 16px 16px 16px;
+    margin: 0 0 16px 16px;
     overflow: hidden;
 }
 
@@ -97,6 +97,10 @@
     img {
         rotate: 90deg;
     }
+}
+
+.workspace-flag.closed {
+    left: -100px;
 }
 
 .users {

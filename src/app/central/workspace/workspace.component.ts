@@ -33,7 +33,8 @@ import { AddChannelDialogComponent } from './add-channel-dialog/add-channel-dial
 })
 export class WorkspaceComponent {
   isMenuVisible = false;
-  isDirectMenuVisible = false;
+  isDmMenuVisible = false;
+  isWorkspaceVisible = true;
   contents = ['Inhalt 1', 'Inhalt 2', 'Inhalt 3'];
   public dialog = inject(MatDialog);
 
@@ -41,8 +42,12 @@ export class WorkspaceComponent {
     this.isMenuVisible = !this.isMenuVisible;
   }
 
-  toggleDirectMenu() {
-    this.isDirectMenuVisible = !this.isDirectMenuVisible;
+  toggleDmMenu() {
+    this.isDmMenuVisible = !this.isDmMenuVisible;
+  }
+
+  toggleWorkspace() {
+    this.isWorkspaceVisible = !this.isWorkspaceVisible
   }
 
   openDialog() {

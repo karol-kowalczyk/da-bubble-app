@@ -1,10 +1,20 @@
 .mat-dialog-container {
+    box-sizing: border-box; 
     display: flex;
+    /* width: 872px !important;
+    height: 539px; */
     align-items: center;
     flex-wrap: wrap;
     padding: 24px;
     font-family: Nunito !important;
     background-color: white;
+    position: relative;
+}
+
+.close-img {
+    position: absolute;
+    right: 45px;
+    top: 45px;
 }
 
 h1 {
@@ -24,7 +34,7 @@ h2 {
 }
 
 input {
-    width: 50%;
+    width: 20%;
     padding: 17px 45px;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -95,11 +105,7 @@ input {
     /* Höhe des Bildes */
 }
 
-/* .primary-btn {
-    color: white;
-    background-color: #454CF2;
-    padding: 12px 25px 12px 25px;
-    gap: 10px;
-    border-radius: 25px;
-    border: none;
-} */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
