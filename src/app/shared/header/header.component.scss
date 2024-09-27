@@ -270,7 +270,8 @@ button {
   margin-top: 15px;
 }
 
-.buttonCancel, .buttonSave {
+.buttonCancel,
+.buttonSave {
   height: 49px;
   padding: 12px 25px;
   border-radius: 50px;
@@ -301,7 +302,7 @@ button {
   }
 }
 
-@media (max-width:1100px) {
+@media (max-width: 1100px) {
   input {
     padding: 17px 30px;
     font-size: 17px;
@@ -326,28 +327,28 @@ button {
     img {
       height: 50px;
       width: 50px;
-    };
+    }
   }
 }
 
-@media (max-width:770px) {
-.displayNoneMobile {
-  display: none;
-}
-
-.logo {
-  span {
-    font-size: 24px;
+@media (max-width: 770px) {
+  .displayNoneMobile {
+    display: none;
   }
-  img {
-    height: 70px;
-    width: 70px;
-  };
-}
 
-@media (max-width: 450px) {
-.displayNoneLogo {
-  display: none;
-}
-}
+  .logo {
+    span {
+      font-size: 24px;
+    }
+    img {
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .displayNoneLogo {
+      display: none;
+    }
+  }
 }
