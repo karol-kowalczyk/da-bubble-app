@@ -1,8 +1,92 @@
 .thread-container {
-    background-color: white;
-    padding: 16px;
-    border-radius: 24px;
-    width: 19vw;
-    height: 90vh;
-    margin:  0 16px 16px 0;
+  background-color: white;
+  border-radius: 24px;
+  height: 90vh;
+  margin: 0 16px 16px 0;
+  width: 27vw;
+}
+
+.containerMessage {
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+  }
+}
+
+.containerMessageMePerspective {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.spacer {
+  height: 1px;
+  width: 296px;
+  background-color: #adb0d9;
+  margin-left: 14px;
+}
+
+.spacerNewMessages {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  gap: 5px;
+  span {
+    font-size: 18px;
+    color: #adb0d9;
+  }
+}
+
+.fontStyleHeader {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.fontStyleChannel {
+  font-size: 14px;
+  color: #797ef3;
+}
+
+.fontStyleName {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fontStyleTime {
+  font-size: 14px;
+  color: #686868;
+}
+
+.displaySpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerHeader {
+  width: 100%;
+  padding: 32px 40px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.closeIcon {
+  height: 24px;
+  width: 24px;
+}
+
+.infoHeader {
+  gap: 20px;
+  display: flex;
+  width: 100%;
+}
+
+.messageBubble {
+  border-radius: 0 20px 20px 20px;
+  background-color: #eceefe;
+  padding: 15px;
 }
