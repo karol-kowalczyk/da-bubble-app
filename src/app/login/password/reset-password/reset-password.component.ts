@@ -5,13 +5,12 @@ import { LoginFooterComponent } from '../../shared-login/login-footer/login-foot
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
-
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-reset-password',
   standalone: true,
-  imports: [LoginLogoComponent, LoginFooterComponent, FormsModule, CommonModule],
+  imports: [LoginLogoComponent, LoginFooterComponent, FormsModule, CommonModule, RouterLink],
   templateUrl: './reset-password.component.html',
   styleUrls: ['./reset-password.component.scss']
 })

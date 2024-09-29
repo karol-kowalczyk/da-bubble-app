@@ -26,6 +26,42 @@ section {
     display: flex;
     justify-content: center;
 
+    label {
+        background-color: white !important;
+        padding: 0 48px;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 16px;
+
+        a {
+            font-size: 18px;
+            font-weight: 300;
+            color: $purple2;
+            text-decoration: none;
+
+            &:hover {
+                font-weight: 600;
+                background-color: $bgColor;
+                border-radius: 100px;
+                padding: 4px;
+            }
+        }
+
+        input[type="checkbox"] {
+            margin: 0;
+            height: 16px;
+            width: 16px;
+            cursor: pointer;
+            border: 3px solid $purple2; // Standard-Border-Farbe
+            border-radius: 4px; // Optional: Rundung der Checkbox
+
+            &:hover {
+                border-color: $purple2; // Farbe beim Hover
+            }
+        }
+    }
+
     form {
         display: flex;
         flex-direction: column;
@@ -180,6 +216,7 @@ section {
             font-size: 18px;
             font-weight: 400;
             border-radius: 25px;
+            margin-top: 16px;
         }
 
         .login-btn-div {
@@ -202,51 +239,10 @@ section {
             }
         }
 
-        form {
-            display: flex;
-            width: 100%;
-            margin: 16px 0;
-            flex-direction: row;
-            align-items: center;
-            height: 44px;
-            font-family: 'Open Sans';
-            
-            input[type="checkbox"] {
-                margin: 0;
-                height: 16px;
-                width: 16px;
-                cursor: pointer;
-                border: 3px solid $purple2;  // Standard-Border-Farbe
-                border-radius: 4px;  // Optional: Rundung der Checkbox
-                &:hover {
-                    border-color: $purple2;  // Farbe beim Hover
-                }
-            }
-            
-            label {
-                background-color: white !important;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                cursor: pointer;
-                font-size: 16px;
-                padding-left: 104px;
-                a {
-                    font-size: 18px;
-                    font-weight: 300;
-                    color: $purple2;
-                    text-decoration: none;
-                    &:hover {
-                        font-weight: 600;
-                        background-color: $bgColor;
-                        border-radius: 100px;
-                        padding: 4px;
-                    }
-                }
-            }
+        .error-message {
+            background-color: white;
+            color: red;
         }
-        
-
 
         @media (max-width: 1100px) {
             width: 70%;
@@ -267,6 +263,10 @@ section {
         @media (max-width: 600px) {
             width: 90%;
 
+            label {
+                padding: 0 16px;
+            }
+
             input {
                 width: 60%;
                 padding: 18px 60px;
@@ -282,10 +282,10 @@ section {
 
             .login-btn-div {
                 border-radius: 30px;
-                width: 100%;
+                // width: 100%;
                 display: flex;
                 justify-content: flex-end;
-            
+
             }
         }
 
@@ -297,7 +297,23 @@ section {
             button {
                 width: 95%;
             }
+
+            .header-div {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 32px;
+            }
         }
 
+        @media (max-width: 380px) { 
+            h1 {
+                margin: 0;
+                font-size: 26px;
+            }
+        }
     }
 }
