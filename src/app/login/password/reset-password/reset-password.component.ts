@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { LoginLogoComponent } from '../../shared/login-logo/login-logo.component';
-import { LoginFooterComponent } from '../../shared/login-footer/login-footer.component';
+import { LoginLogoComponent } from '../../shared-login/login-logo/login-logo.component';
+import { LoginFooterComponent } from '../../shared-login/login-footer/login-footer.component';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
