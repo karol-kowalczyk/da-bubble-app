@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       this.errorMessage = null;
-      this.router.navigate(['/forgot-password']);
+      this.router.navigate(['/main']);
     } catch (error) {
       if (error instanceof FirebaseError) {
         switch (error.code) {
