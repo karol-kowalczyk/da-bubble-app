@@ -6,6 +6,12 @@
     overflow: hidden;
     //Wichtig für die Animation
 } */
+.channels {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 
 .workspace-container {
     background-color: white;
@@ -41,7 +47,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 0px 24px 0px 24px;
+    padding: 2px 24px 2px 24px;
 
     &:hover {
         background-color: #ECEFFF;
@@ -63,7 +69,7 @@
     gap: 10px;
     position: relative;
 
-    p {
+    div {
         font-size: 18;
     }
 
@@ -116,6 +122,7 @@
 }
 
 .users {
+    margin-top: 20px;
     margin-bottom: 40px;
     margin-left: 32px;
     position: relative;

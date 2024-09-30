@@ -9,22 +9,22 @@
                 <div class="headline-sub pointer hover-color menu-item" (click)="toggleMenu()">
                     <img class="poa1" src="assets/workspace/arrow_drop_down.png" alt="">
                     <img src="assets/workspace/workspaces.png" alt="">
-                    <p>Channel</p>
+                    <div>Channel</div>
                 </div>
                 <img class="poa2 pointer hover-color2" (click)="openDialog()" src="assets/workspace/add.png" alt="">
             </div>
             <div class="headline pointer hover-color2 menu-item " *ngIf="isMenuVisible">
                 <img src="assets/workspace/tag.png" alt="">
-                <p>Entwickerteam</p>
+                <div>Entwickerteam</div>
             </div>
             <div class="headline pointer hover-color menu-item " *ngIf="isMenuVisible">
                 <img src="assets/workspace/add_circle.png" alt="">
-                <p>Channels hinzufügen</p>
+                <div>Channels hinzufügen</div>
             </div>
             <div class="headline pointer hover-color content" (click)="toggleDmMenu()">
                 <img class="poa3" src="assets/workspace/arrow_drop_down.png" alt="">
                 <img src="assets/workspace/account_circle.png" alt="">
-                <p class="bold">Direktnachrichten</p>
+                <div class="bold">Direktnachrichten</div>
             </div>
         </div>
         <div>
@@ -32,15 +32,15 @@
                 <div class="user pointer">
                     <img src="assets/avatars/Avatar 1.png" alt="">
                     <img class="poa4" src="assets/avatars/Online.png" alt="">
-                    <p>Max Mustermann (Du)</p>
+                    <div>Max Mustermann (Du)</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="workspace-flag pointer" (click)="toggleWorkspace()" [ngClass]="{'closed': !isWorkspaceVisible}">
-    <p *ngIf="isWorkspaceVisible">Workspace-Menü schließen</p>
-    <p *ngIf="!isWorkspaceVisible">Workspace-Menü öffnen</p>
+    <div *ngIf="isWorkspaceVisible">Workspace-Menü schließen</div>
+    <div *ngIf="!isWorkspaceVisible">Workspace-Menü öffnen</div>
     <img *ngIf="isWorkspaceVisible" src="assets/workspace/Hide-navigation.png" alt="">
     <img *ngIf="!isWorkspaceVisible" src="assets/workspace/Show-navigation.png" alt="">
 </div>
