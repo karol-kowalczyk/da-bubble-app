@@ -36,7 +36,16 @@
       </div>
 
       <div class="login-btn-div">
-        <button class="login-btn" type="submit">Weiter</button>
+        <button 
+          [ngClass]="{
+            'grey': registerForm.invalid, 
+            'purple': registerForm.valid
+          }" 
+          class="login-btn" 
+          type="submit"
+          [disabled]="registerForm.invalid">
+          Weiter
+        </button>
       </div>
 
       <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>

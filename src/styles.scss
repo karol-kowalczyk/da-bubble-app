@@ -1,41 +1,3 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the theme object.
-$da-bubble-theme: mat.define-theme((
-  color: (
-    theme-type: light,
-    primary: mat.$azure-palette,
-    tertiary: mat.$blue-palette,
-  ),
-  density: (
-    scale: 0,
-  )
-));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-:root {
-  @include mat.all-component-themes($da-bubble-theme);
-}
-
-// Comment out the line below if you want to use the pre-defined typography utility classes.
-// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
-// @include mat.typography-hierarchy($da-bubble-theme);
-
-// Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($da-bubble-theme);
-
-/* You can add global styles to this file, and also import other style files */
 @import '../public/assets/fonts/nunito-v26-latin/nunito-font.scss';
 @import '../public/assets/fonts/figtree-v5-latin/figtree-font.scss';
 
@@ -44,24 +6,24 @@ $purple2: #797EF3;
 $bgColor: #ECEEFE;
 
 * {
-    margin: 0;
-    // background-color: #ECEFFF; weil sonst alle Komponenten (Profil Dialog oder Workspace usw. alle komischen Bg haben)
-    font-family: Nunito, sans-serif;
+  margin: 0;
+  // background-color: #ECEFFF; weil sonst alle Komponenten (Profil Dialog oder Workspace usw. alle komischen Bg haben)
+  font-family: Nunito, sans-serif;
 }
 
 body.login-page {
-    overflow-y: hidden;
-    height: 100vh;
-    background-color: $bgColor;
-    overflow-y: auto;
+  overflow-y: hidden;
+  height: 100vh;
+  background-color: $bgColor;
+  overflow-y: auto;
 }
 
 .d-none {
-    display: none;
+  display: none;
 }
 
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .primary-btn {
@@ -73,6 +35,7 @@ body.login-page {
   border: none;
   font-size: 18px;
   line-height: 24.55px;
+
   &:hover {
     background-color: #797EF3;
   }
@@ -87,12 +50,35 @@ body.login-page {
   border: 1px solid #454CF2;
   font-size: 18px;
   line-height: 24.55px;
+
   &:hover {
     background-color: #797EF3;
     color: white;
   }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.grey-text {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 56px;
+  color: #686868;
+}
 
+.purple {
+  background-color: $purple1;
+}
+
+.grey {
+  background-color: #686868;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { LoginLogoComponent } from '../shared-login/login-logo/login-logo.component';
-import { LoginFooterComponent } from '../shared-login/login-footer/login-footer.component';
+import { LoginLogoComponent } from '../../shared/shared-login/login-logo/login-logo.component';
+import { LoginFooterComponent } from '../../shared/shared-login/login-footer/login-footer.component';
 
 
 @Component({

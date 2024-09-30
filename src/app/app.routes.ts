@@ -15,4 +15,5 @@ export const routes: Routes = [
     {path: 'forgot-password', component: ResetPasswordComponent},
     {path: 'choose-new-password', component: ChooseNewPasswordComponent},
     {path: 'main', component: CentralComponent},
+    { path:'**'   , component: LoginComponent  }
 ];
