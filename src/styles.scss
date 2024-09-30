@@ -47,6 +47,10 @@ $bgColor: #ECEEFE;
     font-family: Nunito, sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 body.login-page {
     overflow-y: hidden;
     height: 100vh;
