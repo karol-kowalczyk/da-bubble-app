@@ -13,11 +13,11 @@
                 </div>
                 <img class="poa2 pointer" (click)="openDialog()" src="assets/workspace/add.png" alt="">
             </div>
-            <div class="headline pointer hover-color menu-item " *ngIf="isMenuVisible">
+            <div class="headline pointer hover-color2 menu-item " *ngIf="isMenuVisible">
                 <img src="assets/workspace/tag.png" alt="">
                 <p>Entwickerteam</p>
             </div>
-            <div class="headline pointer hover-color menu-item " *ngIf="isMenuVisible">
+            <div class="headline pointer hover-color menu-item " (click)="openDialog()" *ngIf="isMenuVisible">
                 <img src="assets/workspace/add_circle.png" alt="">
                 <p>Channels hinzufügen</p>
             </div>
