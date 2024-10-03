@@ -37,6 +37,14 @@
     }
 }
 
+.hover-color2 {
+    padding: 0px 24px 0px 24px;
+    &:hover {
+        background-color: #ECEFFF;
+        border-radius: 32px;
+    }
+}
+
 .devspace-content {
     display: flex;
     flex-wrap: wrap;
@@ -119,7 +127,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 4px 24px 4px 24px;
+    padding: 0px 24px 0px 24px;
 
     &:hover {
         background-color: #ECEFFF;
