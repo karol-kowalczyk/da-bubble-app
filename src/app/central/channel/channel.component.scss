@@ -84,7 +84,7 @@
     }
 }
 
-.containerMessageMePerspective {
+.containerMessageSelf {
     display: flex;
     flex-direction: row-reverse;
     padding: 20px;
@@ -162,7 +162,7 @@
     margin-top: 8px;
 }
 
-.messageBubbleMePerspective {
+.messageBubbleSelf {
     border-radius: 20px 0 20px 20px;
     background-color: #797ef3;
     padding: 15px;
