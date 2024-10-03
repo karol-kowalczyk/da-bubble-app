@@ -47,6 +47,16 @@
     }
 }
 
+.header-right-users {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px 4px 8px;
+    &:hover {
+        background-color: #ECEFFF;
+        border-radius: 32px;
+    }
+}
+
 .margin-minus {
     margin-left: -8px;
 }
@@ -55,15 +65,14 @@
     margin-left: 16px;
 }
 
-
 .main-container {
     max-height: 450px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 32px;
-    margin-bottom: 20px;
+    padding-top: 32px;
+    padding-bottom: 0px;
 
     img {
         height: 70px;
@@ -77,6 +86,13 @@
     gap: 20px;
     padding: 20px;
 
+    &:hover {
+        background-color: #EBEEFE;
+    }
+    &:hover .messageBubble {
+        background-color: white;
+    }
+
     img {
         height: 70px;
         width: 70px;
@@ -88,6 +104,10 @@
     display: flex;
     flex-direction: row-reverse;
     padding: 20px;
+
+    &:hover {
+        background-color: #EBEEFE;
+    }
 
     .imgAvatar {
         margin-left: 16px;
@@ -160,6 +180,10 @@
     background-color: #eceefe;
     padding: 15px;
     margin-top: 8px;
+}
+
+.lastAnswers {
+    padding-top: 4px;
 }
 
 .messageBubbleSelf {
@@ -312,6 +336,21 @@ input {
 .fontStyleTime {
     font-size: 14px;
     color: #686868;
+}
+
+.fontStyleNumber {
+    font-weight: 400;
+    font-size: 18;
+    color: #535AF1;
+    line-height: 24.55px;
+}
+
+.fontStyleLast {
+    font-weight: 400;
+    font-size: 14;
+    color: #686868;
+    line-height: 19.1px;
+    padding-left: 20px;
 }
 
 .hover-color {
