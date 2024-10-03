@@ -16,5 +16,11 @@ export class ChooseNewPasswordComponent {
   password: string = "";
   confirmPassword: string = "";
 
+  sendNotification() {
+    setTimeout(() => {
+      alert('Passwort wurde aktualisiert');
+    }, 1400);
+
+  }
 
 }
