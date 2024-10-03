@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { auth, createUserWithEmailAndPassword, sendEmailVerification, User } from '../firebase/firebase-config';
+import { auth, createUserWithEmailAndPassword, sendEmailVerification, User } from '../../shared/firebase/firebase-config';
 import { CommonModule } from '@angular/common';
 import { FirebaseError } from 'firebase/app';
 import { LoginLogoComponent } from '../../shared/shared-login/login-logo/login-logo.component';

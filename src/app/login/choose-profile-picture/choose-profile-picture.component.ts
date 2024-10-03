@@ -3,7 +3,7 @@ import { LoginLogoComponent } from '../../shared/shared-login/login-logo/login-l
 import { LoginFooterComponent } from '../../shared/shared-login/login-footer/login-footer.component';
 import { RouterLink } from '@angular/router';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { storage } from '../firebase/firebase-config';
+import { storage } from '../../shared/firebase/firebase-config';
 import { CommonModule } from '@angular/common';
 
 @Component({
