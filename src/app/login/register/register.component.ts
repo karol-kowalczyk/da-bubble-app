@@ -48,7 +48,7 @@ export class RegisterComponent {
       await sendEmailVerification(user as User);
       this.successMessage = 'Registrierung erfolgreich! Eine Bestätigungs-E-Mail wurde an Ihre E-Mail-Adresse gesendet.';
       this.errorMessage = null;
-      setTimeout(() => this.router.navigate(['/']), 2000);
+      setTimeout(() => this.router.navigate(['/create-profile']), 2000);
     } catch (error) {
       if (error instanceof FirebaseError) {
         this.errorMessage = 'Ein Fehler ist bei der Registrierung aufgetreten. Bitte versuchen Sie es erneut.';
