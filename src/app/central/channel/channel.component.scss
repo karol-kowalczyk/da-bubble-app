@@ -11,6 +11,7 @@
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 25px 45px 25px 45px;
     height: 50px;
     border-top-left-radius: 24px;
@@ -36,6 +37,22 @@
         background-color: #ECEFFF;
         border-radius: 32px;
     }
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    span {
+        margin-left: 6px;
+    }
+}
+
+.margin-minus {
+    margin-left: -8px;
+}
+
+.header-add {
+    margin-left: 16px;
 }
 
 
