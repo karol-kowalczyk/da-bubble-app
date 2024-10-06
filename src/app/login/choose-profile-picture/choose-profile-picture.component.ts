@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../shared/firebase/firebase-config';
 import { CommonModule } from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-choose-profile-picture',
@@ -17,7 +18,7 @@ export class ChooseProfilePictureComponent {
   selectedImage: any = 'assets/img/profile-user-default.svg';
   errorMessage: string = '';
 
-  constructor() {}
+  constructor(private snackBar: MatSnackBar) {}
 
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
@@ -30,7 +31,9 @@ export class ChooseProfilePictureComponent {
         const height = img.height;
 
         if (width > 200 || height > 200) {
-          alert('Das Bild darf maximal 200x200 Pixel groß sein.');
+          this.snackBar.open('Fehler! Das Bild darf maximal 200x200 Pixel groß sein.', 'Schließen', {
+            duration: 5000,
+          });
           return;
         } else {
           this.errorMessage = '';

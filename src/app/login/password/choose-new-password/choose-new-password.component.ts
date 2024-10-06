@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { verifyPasswordResetCode, confirmPasswordReset, getAuth } from "firebase/auth";
 import { auth } from '../../../shared/firebase/firebase-config';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-choose-new-password',
@@ -20,7 +21,7 @@ export class ChooseNewPasswordComponent implements OnInit {
   confirmPassword: string = "";
   actionCode: string = ""; // Füge ein Feld für den Action-Code hinzu
 
-  constructor(private route: ActivatedRoute, private router: Router) {} // Aktiviere den Router
+  constructor(private route: ActivatedRoute, private router: Router, private snackBar: MatSnackBar) {} // Aktiviere den Router
 
   ngOnInit() {
     // Extrahiere den actionCode aus den URL-Parametern
@@ -33,7 +34,9 @@ export class ChooseNewPasswordComponent implements OnInit {
     if (this.actionCode) {
       this.handleResetPassword(this.actionCode);
     } else {
-      alert('Fehler: Der actionCode fehlt.');
+      this.snackBar.open('Fehler: Der actionCode fehlt.', 'Schließen', {
+        duration: 5000,
+      });
     }
   }
 
@@ -44,16 +47,24 @@ export class ChooseNewPasswordComponent implements OnInit {
         const newPassword = this.password; 
         // Bestätigen des neuen Passworts
         confirmPasswordReset(auth, actionCode, newPassword).then(() => {
-          alert('Passwort wurde erfolgreich zurückgesetzt!');
-          setTimeout(() => this.router.navigate(['/login']), 2000);
+          this.snackBar.open('Passwort wurde erfolgreich zurückgesetzt!', 'Schließen', {
+            duration: 5000,
+          });
+          setTimeout(() => this.router.navigate(['/login']), 4000);
         }).catch((error) => {
-          alert('Fehler beim Zurücksetzen des Passworts: ' + error.message);
+          this.snackBar.open('Fehler beim Zurücksetzen des Passworts: ' + error.message, 'Schließen', {
+            duration: 5000,
+          });
         });
       } else {
-        alert('Die Passwörter stimmen nicht überein.');
+        this.snackBar.open('Die Passwörter stimmen nicht überein.', 'Schließen', {
+          duration: 5000,
+        });
       }
     }).catch((error) => {
-      alert('Der Link zum Zurücksetzen des Passworts ist ungültig oder abgelaufen: ' + error.message);
+      this.snackBar.open('Der Link zum Zurücksetzen des Passworts ist ungültig oder abgelaufen: ' + error.message, 'Schließen', {
+        duration: 5000,
+      });
     });
   }
 }
