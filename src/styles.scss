@@ -2,17 +2,13 @@
 @import '../public/assets/fonts/figtree-v5-latin/figtree-font.scss';
 @import '../public/assets/fonts/open-sans-v40-latin/open-sans.scss';
 
-$purple1: #444DF2; // nice
+$purple1: #444DF2;
 $purple2: #797EF3;
 $bgColor: #ECEEFE;
 
 * {
   margin: 0;
-  // background-color: #ECEFFF; weil sonst alle Komponenten (Profil Dialog oder Workspace usw. alle komischen Bg haben)
-
-  //testadadadaddaadad
   font-family: Nunito, sans-serif;
-
 }
 
 body {
@@ -20,7 +16,7 @@ body {
 }
 
 body.login-page {
-    height: 100vh; //cool
+  height: 100vh;
   overflow-y: hidden;
   background-color: $bgColor;
 }
@@ -92,5 +88,5 @@ body {
 
 .wrong-data,
 .error-message {
-    color: red;
+  color: red;
 }
