@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register/register.component';
-import { ChooseProfilePictureComponent } from './login/choose-profile-picture/choose-profile-picture.component';
+import { ChooseProfilePictureComponent } from './login/register/choose-profile-picture/choose-profile-picture.component';
 import { ResetPasswordComponent } from './login/password/reset-password/reset-password.component';
 import { ChooseNewPasswordComponent } from './login/password/choose-new-password/choose-new-password.component';
 import { CentralComponent } from './central/central.component';

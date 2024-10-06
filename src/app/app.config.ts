@@ -14,6 +14,19 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    importProvidersFrom(BrowserAnimationsModule), provideAnimationsAsync(), provideFirebaseApp(() => initializeApp({"projectId":"da-bubble-app","appId":"1:727256499474:web:02040277d8cfc853c71fcb","storageBucket":"da-bubble-app.appspot.com","locationId":"europe-west","apiKey":"AIzaSyAh81UwaXL5hqI4sMGEzFVTDbekSJbeCT0","authDomain":"da-bubble-app.firebaseapp.com","messagingSenderId":"727256499474"})), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()), provideDatabase(() => getDatabase()), provideStorage(() => getStorage())
+    importProvidersFrom(BrowserAnimationsModule),
+    provideAnimationsAsync(),
+    provideFirebaseApp(() => initializeApp({
+      "projectId": "da-bubble-app",
+      "appId": "1:727256499474:web:02040277d8cfc853c71fcb",
+      "storageBucket": "da-bubble-app.appspot.com",
+      "apiKey": "AIzaSyAh81UwaXL5hqI4sMGEzFVTDbekSJbeCT0",
+      "authDomain": "da-bubble-app.firebaseapp.com",
+      "messagingSenderId": "727256499474"
+    })),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideDatabase(() => getDatabase()),
+    provideStorage(() => getStorage())
   ]
 };

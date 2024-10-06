@@ -8,8 +8,7 @@ import { LoginLogoComponent } from '../../shared/shared-login/login-logo/login-l
 import { LoginFooterComponent } from '../../shared/shared-login/login-footer/login-footer.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserDataService } from '../../shared/firebase/user-data.service';
-
-
+import { ChooseProfilePictureComponent } from './choose-profile-picture/choose-profile-picture.component';
 
 @Component({
   selector: 'app-register',
@@ -19,7 +18,8 @@ import { UserDataService } from '../../shared/firebase/user-data.service';
     ReactiveFormsModule,
     RouterLink,
     LoginLogoComponent,
-    LoginFooterComponent
+    LoginFooterComponent,
+    ChooseProfilePictureComponent
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'
@@ -33,6 +33,7 @@ export class RegisterComponent {
   errorMessage: string | null = null;
   successMessage: string | null = null;
 
+
   constructor(private fb: FormBuilder, private router: Router, private snackBar: MatSnackBar) {
     this.registerForm = this.fb.group({
       fullName: ['', Validators.required],
@@ -40,15 +41,6 @@ export class RegisterComponent {
       password: ['', [Validators.required, Validators.minLength(6)]],
       terms: [false, Validators.requiredTrue]
     });
-  }
-
-  showUserDataArray() {
-    const { email, fullName } = this.registerForm.value;
-  
-    // Nur email und fullName in das Array pushen
-    this.userDataArray.push({ email, fullName });
-    
-    console.log(this.userDataArray);
   }
 
   async onRegister() {
@@ -62,7 +54,8 @@ export class RegisterComponent {
         duration: 5000,
       });
       this.errorMessage = null;
-      setTimeout(() => this.router.navigate(['/create-profile']), 2000);
+      this.userDataArray.push({ email, fullName });
+      setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000);
     } catch (error) {
       if (error instanceof FirebaseError) {
         this.snackBar.open('Ein Fehler ist bei der Registrierung aufgetreten. Bitte versuchen Sie es erneut.', 'Schließen', {

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { LoginLogoComponent } from '../../shared/shared-login/login-logo/login-logo.component';
-import { LoginFooterComponent } from '../../shared/shared-login/login-footer/login-footer.component';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { LoginLogoComponent } from '../../../shared/shared-login/login-logo/login-logo.component';
+import { LoginFooterComponent } from '../../../shared/shared-login/login-footer/login-footer.component';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { storage } from '../../shared/firebase/firebase-config';
+import { storage } from '../../../shared/firebase/firebase-config';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-choose-profile-picture',
@@ -14,11 +15,19 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './choose-profile-picture.component.html',
   styleUrls: ['./choose-profile-picture.component.scss']
 })
-export class ChooseProfilePictureComponent {
+export class ChooseProfilePictureComponent implements OnInit {
+  userName:string = '';
+
   selectedImage: any = 'assets/img/profile-user-default.svg';
   errorMessage: string = '';
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(private snackBar: MatSnackBar, private route: ActivatedRoute) {}
+
+  ngOnInit():void {
+    this.route.queryParams.subscribe(params => {
+      this.userName = params['name'];
+    })
+  }
 
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
