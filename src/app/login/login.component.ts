@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { auth, signInWithEmailAndPassword } from './firebase/firebase-config';
+import { auth, signInWithEmailAndPassword } from '../shared/firebase/firebase-config';
 import { FirebaseError } from 'firebase/app';
 import { LoginHeaderComponent } from './shared/login-header/login-header.component';
 import { LoginFooterComponent } from './shared/login-footer/login-footer.component';

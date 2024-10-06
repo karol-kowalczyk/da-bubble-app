@@ -103,3 +103,20 @@ body.login-page {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+<<<<<<< Updated upstream
+=======
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.wrong-data,
+.error-message {
+    color: red;
+}
+>>>>>>> Stashed changes

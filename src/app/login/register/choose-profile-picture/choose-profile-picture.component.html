@@ -8,19 +8,29 @@
                 <img class="little-img" src="assets/img/return-white.svg" alt="return">
             </div>
 
+<<<<<<< Updated upstream:src/app/login/choose-profile-picture/choose-profile-picture.component.html
             <div>
                 <img src="assets/img/big-user-profile.svg" alt="create-user">
                 <div>Frederik Beck</div>
+=======
+            <div class="choosed-user-div ">
+                <img class="selected-image" [src]="selectedImage" alt="create-user">
+                <div class="user-name">{{userName}}</div>
+>>>>>>> Stashed changes:src/app/login/register/choose-profile-picture/choose-profile-picture.component.html
             </div>
 
             <div class="profile-pictures-div">
                 <div>Aus der Liste wählen</div>
                 <div class="profile-pictures">
+<<<<<<< Updated upstream:src/app/login/choose-profile-picture/choose-profile-picture.component.html
                     <img src="assets/img/profile-picture-pic-1.svg" alt="">
                     <img src="assets/img/profile-picture-pic-2.svg" alt="">
                     <img src="assets/img/profile-picture-pic-3.svg" alt="">
                     <img src="assets/img/profile-picture-pic-4.svg" alt="">
                     <img src="assets/img/profile-picture-pic-5.svg" alt="">
+=======
+                    <img *ngFor="let img of userData.profilePictures; let i = index" [src]="img.src" (click)="selectImage('assets/img/profile-picture-pic-' + (i + 1) + '.svg')">
+>>>>>>> Stashed changes:src/app/login/register/choose-profile-picture/choose-profile-picture.component.html
                 </div>
                 <div>
                     <div>eigenes Bild verwenden</div>
