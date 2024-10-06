@@ -88,7 +88,10 @@ button {
   gap: 15px;
   background-color: #ffffff;
   box-shadow: 6px 0px 20px grey;
-  > span {
+  a {
+    text-decoration: none;
+  }
+  > span, a {
     width: 200px;
     height: 53px;
     border-radius: 100px;

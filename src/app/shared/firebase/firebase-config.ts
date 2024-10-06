@@ -8,6 +8,7 @@ import {
   onAuthStateChanged,
   signOut
 } from 'firebase/auth';
+import { getStorage } from 'firebase/storage'; // Importiere Firebase Storage
 
 // Deine Firebase-Konfiguration
 const firebaseConfig = {
@@ -22,14 +23,17 @@ const firebaseConfig = {
 // Firebase initialisieren
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const storage = getStorage(app); // Initialisiere Firebase Storage
 
 // Funktionen und Typen exportieren
 export {
   auth,
+  storage, // Exportiere Firebase Storage
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   sendEmailVerification,
   onAuthStateChanged,
   signOut
 };
+
 export type { User };

@@ -1,77 +1,19 @@
 @import '../../styles.scss';
+@import './login.scss';
 
 * {
     background-color: $bgColor;
     font-family: 'Nunito';
 }
 
-:host {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-main {
-    flex-shrink: 0;
-}
-
-app-login-footer {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 section {
-    display: flex;
-    justify-content: center;
 
     form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: white;
         border-radius: 30px;
         width: 40%;
 
-        h1,
-        div,
-        input,
-        a {
-            background-color: white;
-        }
-
-        .subheader {
-            text-align: center;
-            display: flex;
-            padding: 0 40px;
-        }
-
-        input {
-            margin-top: 16px;
-            margin-bottom: 4px;
-            border-radius: 100px;
-            padding: 18px 32px;
-            background-color: $bgColor;
-            width: 55%; // Ursprüngliche Breite für große Bildschirme
-            height: 16px;
-            border: none;
-            padding-left: 60px;
-        }
-
-        input[type="email"],
-        input[type="password"] {
-            background-repeat: no-repeat;
-            background-position: 16px center;
-            background-size: 20px 20px;
-        }
-
-        input[type="email"] {
-            background-image: url('/assets/img/mail.svg');
-        }
-
-        input[type="password"] {
-            background-image: url('/assets/img/lock.svg');
+        .login-btn-div {
+            width: auto;
         }
 
         input::placeholder {
@@ -149,25 +91,9 @@ section {
             }
         }
 
-        button {
-            cursor: pointer;
-            width: 136px;
-            height: 48px;
-            font-size: 18px;
-            font-weight: 400;
-            border-radius: 25px;
-        }
-
         .login-btn-div {
-            display: flex;
-            gap: 20px;
-            padding-bottom: 30px;
-
             .login-btn {
                 background-color: $purple1;
-                border: none;
-                color: white;
-
                 &:hover {
                     background-color: $purple2;
                 }

@@ -1,0 +1,35 @@
+<app-login-logo></app-login-logo>
+<main>
+    <section>
+        <form action="">
+            <div class="header-div">
+                <img routerLink="login" src="assets/img/return.svg" alt="return">
+                <h1>Wähle deinen Avatar</h1>
+                <img class="little-img" src="assets/img/return-white.svg" alt="return">
+            </div>
+            <div class="choosed-user-div ">
+                <img class="selected-image" [src]="selectedImage" alt="create-user">
+                <div class="user-name">{{userName}}</div>
+            </div>
+
+            <div class="profile-pictures-div">
+                <div class="choose-from-list">Aus der Liste wählen</div>
+                <div class="profile-pictures">
+                    <img *ngFor="let img of userData.profilePictures; let i = index" [src]="img.src" (click)="selectImage('assets/img/profile-picture-pic-' + (i + 1) + '.svg')">
+                </div>
+                <div class="choose-own-img">
+                    <div>eigenes Bild verwenden</div>
+                    <label for="file-upload" class="custom-file-upload">
+                        Datei hochladen
+                    </label>
+                    <input id="file-upload" type="file" (change)="onFileSelected($event)" accept="image/*" />
+                </div>
+              </div>
+
+            <div class="login-btn-div">
+                <button class="login-btn">Weiter</button>
+            </div>
+        </form>
+    </section>
+</main>
+<app-login-footer></app-login-footer>

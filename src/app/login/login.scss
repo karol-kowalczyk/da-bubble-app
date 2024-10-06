@@ -1,0 +1,105 @@
+@import '../../styles.scss';
+
+app-login-footer {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex-shrink: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        h1,
+        div,
+        input,
+        img,
+        a {
+            background-color: white;
+        }
+
+        .subheader {
+            text-align: center;
+            display: flex;
+            padding: 0 40px;
+        }
+
+        input {
+            margin-top: 16px;
+            margin-bottom: 4px;
+            border-radius: 100px;
+            padding: 18px 32px;
+            background-color: $bgColor;
+            width: 55%; // Ursprüngliche Breite für große Bildschirme
+            height: 16px;
+            border: none;
+            padding-left: 60px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            background-repeat: no-repeat;
+            background-position: 16px center;
+            background-size: 20px 20px;
+        }
+
+        input[type="text"] {
+            background-image: url('/assets/img/user-register.svg');
+        }
+
+        input[type="email"] {
+            background-image: url('/assets/img/mail.svg');
+        }
+
+        input[type="password"] {
+            background-image: url('/assets/img/lock.svg');
+        }
+    }
+}
+
+.login-btn-div {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 30px;
+    width: 70%;
+    justify-content: flex-end;
+    border-radius: 100px;
+    margin-top: 16px;
+
+    .login-btn {
+        border: none;
+        color: white;
+        cursor: pointer;
+        width: 136px;
+        height: 48px;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 25px;
+    }
+}
+
+button {
+    cursor: pointer;
+    width: 136px;
+    height: 48px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 25px;
+}

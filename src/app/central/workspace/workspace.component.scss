@@ -6,6 +6,12 @@
     overflow: hidden;
     //Wichtig für die Animation
 } */
+.channels {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 
 .workspace-container {
     background-color: white;
@@ -38,7 +44,11 @@
 }
 
 .hover-color2 {
-    padding: 0px 24px 0px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 24px 2px 24px;
+
     &:hover {
         background-color: #ECEFFF;
         border-radius: 32px;
@@ -59,7 +69,7 @@
     gap: 10px;
     position: relative;
 
-    p {
+    div {
         font-size: 18;
     }
 
@@ -92,7 +102,7 @@
 
 .workspace-flag {
     position: absolute;
-    left: -110px;
+    left: -114px;
     top: 70%;
     background-color: white;
     rotate: 270deg;
@@ -108,10 +118,11 @@
 }
 
 .workspace-flag.closed {
-    left: -100px;
+    left: -102px;
 }
 
 .users {
+    margin-top: 20px;
     margin-bottom: 40px;
     margin-left: 32px;
     position: relative;
@@ -127,7 +138,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 0px 24px 0px 24px;
+    padding: 4px 24px 4px 24px;
 
     &:hover {
         background-color: #ECEFFF;

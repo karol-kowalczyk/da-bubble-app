@@ -1,0 +1,18 @@
+<div class="main-container" [class.defaultBg]="defaultBackground">
+
+    <!-- logo-animation.component.html -->
+    <div [@resizeAndMove]="{ value: containerState, params: { scaleFactor: scaleFactor } }" class="logo-container"
+        (@resizeAndMove.done)="resizeAndMoveDone()">
+
+        <img [style.width]="iconLogoWidth" src="assets/img/logo-icon.png" class="icon" />
+
+        <div [@grow]="{ value: '', params: { textLogoWidth: textLogoWidth } }" (@grow.done)="growDone()"
+            *ngIf="startGrowing" class="text-container">
+
+            <img [@slideIn]="{ value: '', params: { marginLeft: marginLeft } }" (@slideIn.done)="slideDone()"
+                [style.width]="textLogoWidth" *ngIf="textVisible" class="" [src]="logoTextUrl" />
+
+        </div>
+
+    </div>
+</div>
