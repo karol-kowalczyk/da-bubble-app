@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { LoginLogoComponent } from '../../../shared/shared-login/login-logo/login-logo.component';
 import { LoginFooterComponent } from '../../../shared/shared-login/login-footer/login-footer.component';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -6,18 +6,22 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../../shared/firebase/firebase-config';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserDataService } from '../../../shared/firebase/user-data.service';
+
+
 
 
 @Component({
   selector: 'app-choose-profile-picture',
   standalone: true,
-  imports: [LoginLogoComponent, LoginFooterComponent, RouterLink, CommonModule],
+  imports: [LoginLogoComponent, LoginFooterComponent, RouterLink, CommonModule, CommonModule],
   templateUrl: './choose-profile-picture.component.html',
   styleUrls: ['./choose-profile-picture.component.scss']
 })
-export class ChooseProfilePictureComponent implements OnInit {
-  userName:string = '';
 
+export class ChooseProfilePictureComponent implements OnInit {
+  userData = inject(UserDataService);
+  userName:string = '';
   selectedImage: any = 'assets/img/profile-user-default.svg';
   errorMessage: string = '';
 
