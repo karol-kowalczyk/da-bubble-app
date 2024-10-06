@@ -18,10 +18,9 @@ body {
 }
 
 body.login-page {
+    height: 100vh; //cool
   overflow-y: hidden;
-  height: 100vh;
   background-color: $bgColor;
-  overflow-y: auto;
 }
 
 .d-none {
