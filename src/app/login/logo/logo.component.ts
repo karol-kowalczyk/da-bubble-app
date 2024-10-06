@@ -80,12 +80,9 @@ export class LogoComponent {
     this.calculateDynamicValues();
   }
 
-  /**
-   * Calculates dynamic values for logo dimensions based on the window width.
-   */
   calculateDynamicValues() {
     const totalWindowWidth = window.innerWidth;
-    const ratio = 2.513; // Ratio of the logo elements
+    const ratio = 2.513; 
 
     if (totalWindowWidth > 1200) {
       this.textLogoWidth = `470px`;
@@ -112,26 +109,17 @@ export class LogoComponent {
     this.marginLeft = `-${adjustedTextWidth}px`;
   }
 
-  /**
-   * Handler for the completion of the grow animation.
-   */
   growDone() {
     setTimeout(() => {
       this.textVisible = true;
     }, 600);
   }
 
-  /**
-   * Handler for the completion of the slide animation.
-   */
+ 
   slideDone() {
     this.containerState = 'end';
   }
 
-  /**
-   * Handler for the completion of the resize and move animation.
-   * Navigates to the dashboard and updates the logo text URL.
-   */
   async resizeAndMoveDone() {
     if (this.containerState === 'end') {
       this.defaultBackground = true;
