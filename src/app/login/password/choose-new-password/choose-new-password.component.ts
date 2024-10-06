@@ -16,6 +16,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './choose-new-password.component.html',
   styleUrls: ['./choose-new-password.component.scss']
 })
+
 export class ChooseNewPasswordComponent implements OnInit {
   password: string = "";
   confirmPassword: string = "";

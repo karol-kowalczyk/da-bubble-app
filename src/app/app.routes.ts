@@ -7,7 +7,6 @@ import { ChooseNewPasswordComponent } from './login/password/choose-new-password
 import { CentralComponent } from './central/central.component';
 import { LogoComponent } from './login/logo/logo.component';
 
-
 export const routes: Routes = [
     { path: '',   redirectTo: '/hello', pathMatch: 'full' },
     { path: 'hello', component: LogoComponent},

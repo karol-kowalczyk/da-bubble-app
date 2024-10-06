@@ -8,15 +8,12 @@ import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserDataService } from '../../../shared/firebase/user-data.service';
 
-
-
-
 @Component({
   selector: 'app-choose-profile-picture',
   standalone: true,
   imports: [LoginLogoComponent, LoginFooterComponent, RouterLink, CommonModule, CommonModule],
   templateUrl: './choose-profile-picture.component.html',
-  styleUrls: ['./choose-profile-picture.component.scss']
+  styleUrl: './choose-profile-picture.component.scss'
 })
 
 export class ChooseProfilePictureComponent implements OnInit {
