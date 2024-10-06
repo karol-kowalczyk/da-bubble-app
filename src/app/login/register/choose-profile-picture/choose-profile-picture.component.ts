@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream:src/app/login/choose-profile-picture/choose-profile-picture.component.ts
-import { Component } from '@angular/core';
-import { LoginLogoComponent } from '../shared/login-logo/login-logo.component';
-import { LoginFooterComponent } from '../shared/login-footer/login-footer.component';
-=======
 import { Component, OnInit, inject } from '@angular/core';
 import { LoginLogoComponent } from '../../../shared/shared-login/login-logo/login-logo.component';
 import { LoginFooterComponent } from '../../../shared/shared-login/login-footer/login-footer.component';
@@ -13,24 +8,13 @@ import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserDataService } from '../../../shared/firebase/user-data.service';
 
-
->>>>>>> Stashed changes:src/app/login/register/choose-profile-picture/choose-profile-picture.component.ts
-
-
 @Component({
   selector: 'app-choose-profile-picture',
   standalone: true,
-<<<<<<< Updated upstream:src/app/login/choose-profile-picture/choose-profile-picture.component.ts
-  imports: [LoginLogoComponent,LoginFooterComponent],
-=======
   imports: [LoginLogoComponent, LoginFooterComponent, RouterLink, CommonModule, CommonModule],
->>>>>>> Stashed changes:src/app/login/register/choose-profile-picture/choose-profile-picture.component.ts
   templateUrl: './choose-profile-picture.component.html',
   styleUrl: './choose-profile-picture.component.scss'
 })
-<<<<<<< Updated upstream:src/app/login/choose-profile-picture/choose-profile-picture.component.ts
-export class ChooseProfilePictureComponent {
-=======
 
 export class ChooseProfilePictureComponent implements OnInit {
   userData = inject(UserDataService);
@@ -68,6 +52,23 @@ export class ChooseProfilePictureComponent implements OnInit {
           const storageRef = ref(storage, filePath);
 
           const uploadTask = uploadBytesResumable(storageRef, file);
->>>>>>> Stashed changes:src/app/login/register/choose-profile-picture/choose-profile-picture.component.ts
 
+          uploadTask.on('state_changed',
+            (snapshot) => {},
+            (error) => {
+              console.error('Fehler beim Hochladen:', error);
+            },
+            () => {
+              getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                this.selectedImage = downloadURL;
+              });
+            }
+          );
+        }
+      };
+    }
+  }
+  selectImage(imagePath: string) {
+    this.selectedImage = imagePath;
+  }
 }

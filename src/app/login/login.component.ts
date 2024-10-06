@@ -3,10 +3,10 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { Router, RouterLink } from '@angular/router';
 import { auth, signInWithEmailAndPassword } from '../shared/firebase/firebase-config';
 import { FirebaseError } from 'firebase/app';
-import { LoginHeaderComponent } from './shared/login-header/login-header.component';
-import { LoginFooterComponent } from './shared/login-footer/login-footer.component';
+import { LoginHeaderComponent } from '../shared/shared-login/login-header/login-header.component';
+import { LoginFooterComponent } from '../shared/shared-login/login-footer/login-footer.component';
 import { Renderer2 } from '@angular/core';
-import { ResponsiveCreateUserSectionComponent } from './shared/responsive-create-user-section/responsive-create-user-section.component';
+import { ResponsiveCreateUserSectionComponent } from '../shared/shared-login/responsive-create-user-section/responsive-create-user-section.component';
 import { CommonModule } from '@angular/common';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       this.errorMessage = null;
-      this.router.navigate(['/forgot-password']);
+      this.router.navigate(['/main']);
     } catch (error) {
       if (error instanceof FirebaseError) {
         switch (error.code) {

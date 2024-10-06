@@ -4,16 +4,11 @@ import { Router, RouterLink } from '@angular/router';
 import { auth, createUserWithEmailAndPassword, sendEmailVerification, User } from '../../shared/firebase/firebase-config';
 import { CommonModule } from '@angular/common';
 import { FirebaseError } from 'firebase/app';
-<<<<<<< Updated upstream
-import { LoginLogoComponent } from '../shared/login-logo/login-logo.component';
-import { LoginFooterComponent } from '../shared/login-footer/login-footer.component';
-=======
 import { LoginLogoComponent } from '../../shared/shared-login/login-logo/login-logo.component';
 import { LoginFooterComponent } from '../../shared/shared-login/login-footer/login-footer.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserDataService } from '../../shared/firebase/user-data.service';
 import { ChooseProfilePictureComponent } from './choose-profile-picture/choose-profile-picture.component';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-register',
@@ -59,12 +54,8 @@ export class RegisterComponent {
         duration: 5000,
       });
       this.errorMessage = null;
-<<<<<<< Updated upstream
-      setTimeout(() => this.router.navigate(['/']), 2000);
-=======
       this.userDataArray.push({ email, fullName });
       setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000);
->>>>>>> Stashed changes
     } catch (error) {
       if (error instanceof FirebaseError) {
         this.snackBar.open('Ein Fehler ist bei der Registrierung aufgetreten. Bitte versuchen Sie es erneut.', 'Schließen', {

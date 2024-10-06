@@ -3,40 +3,28 @@
     <section>
         <form action="">
             <div class="header-div">
-                <img src="assets/img/return.svg" alt="return">
+                <img routerLink="login" src="assets/img/return.svg" alt="return">
                 <h1>Wähle deinen Avatar</h1>
                 <img class="little-img" src="assets/img/return-white.svg" alt="return">
             </div>
-
-<<<<<<< Updated upstream:src/app/login/choose-profile-picture/choose-profile-picture.component.html
-            <div>
-                <img src="assets/img/big-user-profile.svg" alt="create-user">
-                <div>Frederik Beck</div>
-=======
             <div class="choosed-user-div ">
                 <img class="selected-image" [src]="selectedImage" alt="create-user">
                 <div class="user-name">{{userName}}</div>
->>>>>>> Stashed changes:src/app/login/register/choose-profile-picture/choose-profile-picture.component.html
             </div>
 
             <div class="profile-pictures-div">
-                <div>Aus der Liste wählen</div>
+                <div class="choose-from-list">Aus der Liste wählen</div>
                 <div class="profile-pictures">
-<<<<<<< Updated upstream:src/app/login/choose-profile-picture/choose-profile-picture.component.html
-                    <img src="assets/img/profile-picture-pic-1.svg" alt="">
-                    <img src="assets/img/profile-picture-pic-2.svg" alt="">
-                    <img src="assets/img/profile-picture-pic-3.svg" alt="">
-                    <img src="assets/img/profile-picture-pic-4.svg" alt="">
-                    <img src="assets/img/profile-picture-pic-5.svg" alt="">
-=======
                     <img *ngFor="let img of userData.profilePictures; let i = index" [src]="img.src" (click)="selectImage('assets/img/profile-picture-pic-' + (i + 1) + '.svg')">
->>>>>>> Stashed changes:src/app/login/register/choose-profile-picture/choose-profile-picture.component.html
                 </div>
-                <div>
+                <div class="choose-own-img">
                     <div>eigenes Bild verwenden</div>
-                    <input id="file-upload" type="file" accept="image/*"/>
+                    <label for="file-upload" class="custom-file-upload">
+                        Datei hochladen
+                    </label>
+                    <input id="file-upload" type="file" (change)="onFileSelected($event)" accept="image/*" />
                 </div>
-            </div>
+              </div>
 
             <div class="login-btn-div">
                 <button class="login-btn">Weiter</button>

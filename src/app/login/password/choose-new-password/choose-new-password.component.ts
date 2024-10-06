@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-import { Component } from '@angular/core';
-import { LoginLogoComponent } from '../../shared/login-logo/login-logo.component';
-import { LoginFooterComponent } from '../../shared/login-footer/login-footer.component';
-=======
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'; // Importiere ActivatedRoute
 import { LoginLogoComponent } from '../../../shared/shared-login/login-logo/login-logo.component';
@@ -13,18 +8,15 @@ import { CommonModule } from '@angular/common';
 import { verifyPasswordResetCode, confirmPasswordReset, getAuth } from "firebase/auth";
 import { auth } from '../../../shared/firebase/firebase-config';
 import { MatSnackBar } from '@angular/material/snack-bar';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-choose-new-password',
   standalone: true,
-  imports: [LoginLogoComponent, LoginFooterComponent],
+  imports: [LoginLogoComponent, LoginFooterComponent, RouterLink, FormsModule, CommonModule],
   templateUrl: './choose-new-password.component.html',
-  styleUrl: './choose-new-password.component.scss'
+  styleUrls: ['./choose-new-password.component.scss']
 })
-<<<<<<< Updated upstream
-export class ChooseNewPasswordComponent {
-=======
+
 export class ChooseNewPasswordComponent implements OnInit {
   password: string = "";
   confirmPassword: string = "";
@@ -38,7 +30,6 @@ export class ChooseNewPasswordComponent implements OnInit {
       this.actionCode = params['oobCode']; // oobCode ist der Parameter für den actionCode
     });
   }
->>>>>>> Stashed changes
 
   sendNotification() {
     if (this.actionCode) {
