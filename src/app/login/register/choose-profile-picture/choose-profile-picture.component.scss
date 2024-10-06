@@ -1,15 +1,15 @@
-@import '../../../styles.scss';
-@import '../login.scss';
+@import '../../../../styles.scss';
+@import '../../login.component.scss';
 
 * {
     background-color: $bgColor;
     font-family: 'Nunito';
 }
 
+
 section {
     form {
         border-radius: 30px;
-
         h1 {
             color: $purple1;
             font-size: 46px;
@@ -29,9 +29,6 @@ section {
 
                 img {
                     cursor: pointer;
-                }
-
-                img {
                     background-color: white;
                 }
             }
@@ -92,7 +89,6 @@ section {
             border-radius: 30px;
             width: 100%;
             background-color: white;
-
             img {
                 background-color: white;
                 padding: 0 16px;
@@ -137,7 +133,6 @@ section {
                 font-size: 34px;
             }
         }
-
 
         @media (max-width: 600px) {
             width: 90%;

@@ -7,20 +7,15 @@
                 <h1>Wähle deinen Avatar</h1>
                 <img class="little-img" src="assets/img/return-white.svg" alt="return">
             </div>
-
             <div class="choosed-user-div ">
                 <img class="selected-image" [src]="selectedImage" alt="create-user">
-                <div class="user-name">Frederik Beck</div>
+                <div class="user-name">{{userName}}</div>
             </div>
 
             <div class="profile-pictures-div">
                 <div class="choose-from-list">Aus der Liste wählen</div>
                 <div class="profile-pictures">
-                    <img src="assets/img/profile-picture-pic-1.svg" alt="" (click)="selectImage('assets/img/profile-picture-pic-1.svg')">
-                    <img src="assets/img/profile-picture-pic-2.svg" alt="" (click)="selectImage('assets/img/profile-picture-pic-2.svg')">
-                    <img src="assets/img/profile-picture-pic-3.svg" alt="" (click)="selectImage('assets/img/profile-picture-pic-3.svg')">
-                    <img src="assets/img/profile-picture-pic-4.svg" alt="" (click)="selectImage('assets/img/profile-picture-pic-4.svg')">
-                    <img src="assets/img/profile-picture-pic-5.svg" alt="" (click)="selectImage('assets/img/profile-picture-pic-5.svg')">
+                    <img *ngFor="let img of userData.profilePictures; let i = index" [src]="img.src" (click)="selectImage('assets/img/profile-picture-pic-' + (i + 1) + '.svg')">
                 </div>
                 <div class="choose-own-img">
                     <div>eigenes Bild verwenden</div>

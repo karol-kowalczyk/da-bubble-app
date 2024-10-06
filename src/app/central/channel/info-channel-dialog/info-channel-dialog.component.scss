@@ -1,0 +1,160 @@
+.custom-dialog-container .mat-dialog-container {
+    box-sizing: border-box;
+    display: flex;
+    width: 872px !important;
+    height: 539px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 24px;
+    font-family: Nunito !important;
+    background-color: white;
+    position: relative;
+}
+
+.close-img {
+    position: absolute;
+    right: 45px;
+    top: 45px;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: 0;
+        padding-left: 8px;
+    }
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+}
+
+.not-bold {
+    font-weight: 400;
+    color: #686969;
+}
+
+.field1 {
+    border: 1px solid #ADB1D8;
+    border-radius: 24px;
+    padding: 0 16px 16px 16px;
+}
+
+.field1-channel {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: 0;
+        padding-left: 8px;
+    }
+
+    ;
+}
+
+.field2 {
+    border: 1px solid #ADB1D8;
+    border-radius: 24px;
+    padding: 0 16px 16px 16px;
+}
+
+.field2-descrip {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: 0;
+        padding-left: 8px;
+    }
+
+    ;
+}
+
+input {
+    width: 20%;
+    padding: 17px 45px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 42px;
+    border: solid lightgray;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.input-container {
+    position: relative;
+    width: 500px;
+}
+
+.input-container input {
+    width: 100%;
+    padding-left: 40px;
+    /* Platz für das Bild */
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.input-container::before {
+    content: '';
+    background-image: url('/assets/workspace/tag-grey.png');
+    /* Pfad zu deinem Bild */
+    background-size: 16px 16px;
+    /* Größe des Bildes */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 10px;
+    /* Abstand vom linken Rand */
+    top: 52%;
+    transform: translateY(-50%);
+    width: 20px;
+    /* Breite des Bildes */
+    height: 20px;
+    /* Höhe des Bildes */
+}
+
+.input-container2 {
+    position: relative;
+    width: 500px;
+}
+
+.input-container2 input {
+    width: 100%;
+    padding-left: 40px;
+    /* Platz für das Bild */
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.input-container2::before {
+    content: '';
+    /* Pfad zu deinem Bild */
+    background-size: 16px 16px;
+    /* Größe des Bildes */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 10px;
+    /* Abstand vom linken Rand */
+    top: 52%;
+    transform: translateY(-50%);
+    width: 20px;
+    /* Breite des Bildes */
+    height: 20px;
+    /* Höhe des Bildes */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}

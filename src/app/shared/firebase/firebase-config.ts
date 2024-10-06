@@ -35,4 +35,5 @@ export {
   onAuthStateChanged,
   signOut
 };
+
 export type { User };
