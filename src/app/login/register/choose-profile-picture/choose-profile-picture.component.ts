@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { LoginLogoComponent } from '../../../shared/shared-login/login-logo/login-logo.component';
 import { LoginFooterComponent } from '../../../shared/shared-login/login-footer/login-footer.component';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../../shared/firebase/firebase-config';
 import { CommonModule } from '@angular/common';
@@ -22,13 +22,15 @@ export class ChooseProfilePictureComponent implements OnInit {
   selectedImage: any = 'assets/img/profile-user-default.svg';
   errorMessage: string = '';
 
-  constructor(private snackBar: MatSnackBar, private route: ActivatedRoute) {}
+  constructor(private snackBar: MatSnackBar, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit():void {
     this.route.queryParams.subscribe(params => {
       this.userName = params['name'];
     })
   }
+
+
 
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
@@ -70,5 +72,14 @@ export class ChooseProfilePictureComponent implements OnInit {
   }
   selectImage(imagePath: string) {
     this.selectedImage = imagePath;
+  }
+
+  passOnUserNameAndProfilePicture() {
+    this.router.navigate(['/main'], { 
+      queryParams: { 
+        name: this.userName, 
+        profilePicture: this.selectedImage
+      }
+    });
   }
 }

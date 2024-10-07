@@ -6,6 +6,8 @@ import { ResetPasswordComponent } from './login/password/reset-password/reset-pa
 import { ChooseNewPasswordComponent } from './login/password/choose-new-password/choose-new-password.component';
 import { CentralComponent } from './central/central.component';
 import { LogoComponent } from './login/logo/logo.component';
+import { HeaderComponent } from './shared/header/header.component';
+
 
 export const routes: Routes = [
     { path: '',   redirectTo: '/hello', pathMatch: 'full' },
@@ -16,5 +18,6 @@ export const routes: Routes = [
     {path: 'forgot-password', component: ResetPasswordComponent},
     {path: 'choose-new-password', component: ChooseNewPasswordComponent},
     {path: 'main', component: CentralComponent},
+    {path: 'header', component: HeaderComponent},
     { path:'**'   , component: LoginComponent}
 ];
