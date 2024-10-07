@@ -1,15 +1,25 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [RouterLink],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  userName: string = '';
+  profilePicture: string = '';
+
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+      this.route.queryParams.subscribe(params => {
+        this.userName = params['name'];
+        this.profilePicture = params['profilePicture'];
+      });
+  }
   closeDialog() {
     let container = document.getElementById('openDialogHeader');
     let dialog = document.getElementById('openDialogProfile');

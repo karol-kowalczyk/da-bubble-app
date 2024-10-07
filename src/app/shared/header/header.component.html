@@ -9,12 +9,12 @@
     placeholder="Devspace durchsuchen"
   />
   <div class="profil">
-    <span class="displayNoneMobile">Frederik Beck</span>
+    <span class="displayNoneMobile">{{userName}}</span>
     <img
-      class="profilImg"
-      src="./../../../../assets/img/header/avatar1.png"
-      alt=""
-    />
+    class="profilImg"
+    [src]="profilePicture"
+    alt="Profilbild"
+  />
     <button (click)="openDialog($event)">
       <img
         class="dropDownIcon"

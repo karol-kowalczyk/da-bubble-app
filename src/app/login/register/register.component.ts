@@ -1,4 +1,4 @@
-import { Component, inject, Injectable } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { auth, createUserWithEmailAndPassword, sendEmailVerification, User } from '../../shared/firebase/firebase-config';
@@ -55,7 +55,8 @@ export class RegisterComponent {
       });
       this.errorMessage = null;
       this.userDataArray.push({ email, fullName });
-      setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000);
+      setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000)
+      ;
     } catch (error) {
       if (error instanceof FirebaseError) {
         this.snackBar.open('Ein Fehler ist bei der Registrierung aufgetreten. Bitte versuchen Sie es erneut.', 'Schließen', {
