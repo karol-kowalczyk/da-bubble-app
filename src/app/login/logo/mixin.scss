@@ -1,0 +1,32 @@
+@import '../../../../public/assets/fonts/nunito-v26-latin/nunito-font.scss';
+
+@mixin flex-align-justify($df: flex, $ai: center, $jc: center) {
+    display: $df;
+    align-items: $ai;
+    justify-content: $jc;
+}
+
+@mixin display-align-justify($disp: flex, $ai: center, $jc: center) {
+    display: $disp;
+    align-items: $ai;
+    justify-content: $jc;
+}
+
+@mixin font-size-weight-color($fs: 18px, $fw: 400, $cl: #000000) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $cl;
+}
+
+.font-nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+$backgroundHover: #ECEEFE;
+$fontHover: #535AF1;
+$errorRosa: #ED1E79;
+$purple: #444DF2;
+$deactivated: #686868;
+$purpleHover: #797EF3;
+$lightpurple: #ADB0D9;
+$black: #000000;

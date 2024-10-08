@@ -1,0 +1,221 @@
+@import '../../../../styles.scss';
+@import '../../login.component.scss';
+
+* {
+    background-color: $bgColor;
+    font-family: 'Nunito';
+}
+
+
+section {
+    form {
+        border-radius: 30px;
+        h1 {
+            color: $purple1;
+            font-size: 46px;
+            padding: 16px 0;
+        }
+
+        .profile-pictures-div {
+            background-color: white;
+
+            .choose-from-list {
+                padding-bottom: 16px;
+            }
+
+            .profile-pictures {
+                background-color: white;
+                padding-bottom: 16px;
+
+                img {
+                    cursor: pointer;
+                    background-color: white;
+                }
+            }
+
+            .custom-file-upload {
+                display: inline-block;
+                padding: 10px 20px;
+                cursor: pointer;
+                background-color: white;
+                border: 1px solid $purple2;
+                text-align: center;
+                border-radius: 25px;
+                font-weight: 700;
+                color: $purple1;
+            }
+
+            .custom-file-upload:hover {
+                background-color: $purple1;
+                color: white;
+            }
+
+            input[type="file"] {
+                display: none;
+            }
+
+            .choose-own-img {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        div {
+            background-color: white;
+        }
+
+        .choosed-user-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .selected-image {
+                width: 200px;
+                height: 200px;
+            }
+            .user-name {
+                text-align: center;
+                font-weight: 700;
+                font-size: 32px;
+                padding: 32px 0 16px;
+            }
+
+        }
+
+        .header-div {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 30px;
+            width: 100%;
+            background-color: white;
+            img {
+                background-color: white;
+                padding: 0 16px;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+
+            .little-img {
+                width: 1px;
+                cursor: default;
+            }
+        }
+
+        .login-btn-div {
+            .login-btn {
+                background-color: $purple1;
+                border: none;
+                color: white;
+
+                &:hover {
+                    background-color: $purple2;
+                }
+            }
+        }
+
+        @media (max-width: 1100px) {
+            width: 70%;
+
+            input {
+                width: 60%;
+            }
+        }
+
+        @media (max-width: 780px) { 
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 690px) { 
+            h1 {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            width: 90%;
+
+            input {
+                width: 60%;
+                padding: 18px 60px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+
+
+        @media (max-width: 460px) { 
+            h1 {
+                font-size: 28px;
+            }
+
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            input {
+                padding: 18px 30px 18px 60px;
+            }
+
+            button {
+                width: 95%;
+            }
+
+            .profile-pictures {
+                img {
+                    width: 62px;
+                    height: 62px;
+                }
+            }
+
+            .choose-own-img {
+                div {
+                    font-size: 14px;
+                }
+            }
+
+            .custom-file-upload {
+                font-size: 14px;
+                padding: 8px 8px !important;
+            }
+        }
+
+        @media (max-width: 375px) { 
+            h1 {
+                font-size: 19px;
+            }
+
+            .choose-own-img {
+                font-size: 12px;
+            }
+
+            .custom-file-upload {
+                padding: 8px 4px !important;
+                font-size: 12px
+            }
+
+            .profile-pictures {
+                img {
+                    width: 58px;
+                    height: 58px;
+                }
+            }
+        }
+
+        @media (max-width: 330px) {
+            .profile-pictures {
+                img {
+                    width: 54px;
+                    height: 54px;
+                }
+            }
+        }
+    }
+}
