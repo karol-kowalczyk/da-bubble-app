@@ -1,6 +1,6 @@
-<div class="thread-container">
+<div id="threadContainer" class="thread-container">
   <div class="displaySpaceBetween containerHeader">
-    <div class="center">
+    <div class="center threadHeadline">
       <span class="fontStyleHeader"> Thread </span>
       <span class="fontStyleChannel"> # Entwicklerteam</span>
     </div>
@@ -9,6 +9,7 @@
       class="iconsSize closeIcon"
       src="./../../../../assets/img/header/close-2.png"
       alt=""
+      (click)="closeThreadDialog()"
     />
   </div>
 
@@ -82,7 +83,7 @@
         alt=""
       />
       <div class="infoMessage">
-        <div class="infoHeader">
+        <div class="infoHeader infoHeaderMePerspective">
           <div class="emojiMarkMePerspective center">
             <img src="./../../../../assets/emojis/add_reaction.png" alt="" />
             <img src="./../../../../assets/emojis/add_reaction.png" alt="" />
