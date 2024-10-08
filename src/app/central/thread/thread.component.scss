@@ -1,7 +1,7 @@
 .thread-container {
   background-color: white;
   border-radius: 24px;
-  width: 24vw;
+  width: 23vw;
   height: 90vh;
   padding-bottom: 30px;
 }
@@ -259,5 +259,28 @@ input {
     height: 24px;
     width: 24px;
     margin: 0;
+  }
+}
+
+@media (max-width: 1450px) {
+  .infoHeader {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .infoHeaderMePerspective {
+    flex-direction: column-reverse !important;
+  }
+
+  .imgAvatar {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (max-width:1400px) {
+  .threadHeadline {
+flex-direction: column;
+margin-left: 40px;
   }
 }
