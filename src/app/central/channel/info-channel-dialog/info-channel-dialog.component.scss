@@ -28,6 +28,8 @@ h1 {
     font-weight: 700;
     display: flex;
     align-items: center;
+    margin-top: 24px;
+    margin-left: 16px;
 
     p {
         margin: 0;
@@ -50,6 +52,7 @@ h2 {
     border: 1px solid #ADB1D8;
     border-radius: 24px;
     padding: 0 16px 16px 16px;
+    margin-bottom: 16px;
 }
 
 .field1-channel {
@@ -60,8 +63,6 @@ h2 {
         margin: 0;
         padding-left: 8px;
     }
-
-    ;
 }
 
 .field2 {
@@ -80,6 +81,19 @@ h2 {
     }
 
     ;
+}
+
+.channel-creator {
+    font-size: 24px;
+    font-weight: 400;
+    color: #535AF1;
+}
+
+.spacer1 {
+    height: 1px;
+    width: 100%;
+    background-color: #adb0d9;
+    margin: 24px 0 16px 0;
 }
 
 input {
@@ -157,4 +171,5 @@ input {
 .button-container {
     display: flex;
     justify-content: flex-end;
+    margin-top: 16px;
 }
