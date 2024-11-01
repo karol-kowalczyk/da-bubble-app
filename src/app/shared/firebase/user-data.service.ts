@@ -19,8 +19,12 @@ export class UserDataService {
     })
   }
 
-  async addNewUser(userDataArray:any) {
-    await addDoc(this.getUserRef(), userDataArray);
+  async addNewUser(userData: { fullName: string; email: string }) {
+    try {
+      await addDoc(this.getUserRef(), userData);
+    } catch (error) {
+      console.error("Error adding new user: ", error);
+    }
   }
 
   ngonDestroy() {
@@ -36,9 +40,6 @@ export class UserDataService {
   }
 
   showUserDataArray() {
-
-
-
     setTimeout(() => this.addNewUser(this.userDataArray), 1000);
     setTimeout(() => {
       console.log(this.userDataArray);
