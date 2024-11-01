@@ -42,9 +42,11 @@
             'purple': registerForm.valid
           }" 
           class="login-btn" 
+          (click)="userData.showUserDataArray()"
           type="submit"
           [disabled]="registerForm.invalid">
           Weiter
+
         </button>
 
       </div>

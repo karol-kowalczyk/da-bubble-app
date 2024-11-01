@@ -55,7 +55,7 @@ export class RegisterComponent {
       });
       this.errorMessage = null;
       this.userDataArray.push({ email, fullName });
-      setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000)
+      // setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000)
       ;
     } catch (error) {
       if (error instanceof FirebaseError) {
@@ -73,5 +73,6 @@ export class RegisterComponent {
   hideError() {
     this.errorMessage = null;
   }
+
 
 }

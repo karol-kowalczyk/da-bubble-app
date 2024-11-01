@@ -10,8 +10,6 @@ import { ResponsiveCreateUserSectionComponent } from '../shared/shared-login/res
 import { CommonModule } from '@angular/common';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
-
-
 @Component({
   selector: 'app-login',
   standalone: true,
