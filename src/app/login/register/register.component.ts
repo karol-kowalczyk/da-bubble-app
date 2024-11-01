@@ -9,7 +9,6 @@ import { LoginFooterComponent } from '../../shared/shared-login/login-footer/log
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserDataService } from '../../shared/firebase/user-data.service';
 import { ChooseProfilePictureComponent } from './choose-profile-picture/choose-profile-picture.component';
-import { UserRegisterListService } from '../../shared/firebase/user-register-list.service';
 
 @Component({
   selector: 'app-register',
@@ -29,8 +28,6 @@ export class RegisterComponent {
 
   userData = inject(UserDataService);
   userDataArray = this.userData.userDataArray;
-
-  userList = inject(UserRegisterListService);
 
   registerForm: FormGroup;
   errorMessage: string | null = null;
@@ -58,7 +55,7 @@ export class RegisterComponent {
       });
       this.errorMessage = null;
       this.userDataArray.push({ email, fullName });
-      setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000)
+      // setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000)
       ;
     } catch (error) {
       if (error instanceof FirebaseError) {
