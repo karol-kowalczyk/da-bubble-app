@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { verifyPasswordResetCode, confirmPasswordReset, getAuth } from "firebase/auth";
-import { auth } from '../../../shared/firebase/firebase-config';
+import { auth } from '../../../shared/firebase/services/firebase-config';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({

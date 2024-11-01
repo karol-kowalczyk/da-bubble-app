@@ -3,10 +3,10 @@ import { LoginLogoComponent } from '../../../shared/shared-login/login-logo/logi
 import { LoginFooterComponent } from '../../../shared/shared-login/login-footer/login-footer.component';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { storage } from '../../../shared/firebase/firebase-config';
+import { storage } from '../../../shared/firebase/services/firebase-config';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UserDataService } from '../../../shared/firebase/user-data.service';
+import { UserDataService } from '../../../shared/firebase/services/user-data.service';
 
 @Component({
   selector: 'app-choose-profile-picture',

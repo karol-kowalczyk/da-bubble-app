@@ -1,14 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { auth, createUserWithEmailAndPassword, sendEmailVerification, User } from '../../shared/firebase/firebase-config';
+import { auth, createUserWithEmailAndPassword, sendEmailVerification, User } from '../../shared/firebase/services/firebase-config';
 import { CommonModule } from '@angular/common';
 import { FirebaseError } from 'firebase/app';
 import { LoginLogoComponent } from '../../shared/shared-login/login-logo/login-logo.component';
 import { LoginFooterComponent } from '../../shared/shared-login/login-footer/login-footer.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UserDataService } from '../../shared/firebase/user-data.service';
+import { UserDataService } from '../../shared/firebase/services/user-data.service';
 import { ChooseProfilePictureComponent } from './choose-profile-picture/choose-profile-picture.component';
+import { UserRegisterListService } from '../../shared/firebase/services/user-register-list.service';
 
 @Component({
   selector: 'app-register',
@@ -28,6 +29,8 @@ export class RegisterComponent {
 
   userData = inject(UserDataService);
   userDataArray = this.userData.userDataArray;
+
+  userList = inject(UserRegisterListService);
 
   registerForm: FormGroup;
   errorMessage: string | null = null;
@@ -73,5 +76,6 @@ export class RegisterComponent {
   hideError() {
     this.errorMessage = null;
   }
+
 
 }
