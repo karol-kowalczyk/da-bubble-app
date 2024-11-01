@@ -45,18 +45,24 @@ export class RegisterComponent {
 
   async onRegister() {
     const { email, password, fullName } = this.registerForm.value;
-
+  
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       await sendEmailVerification(user as User);
-      this.snackBar.open('Registrierung erfolgreich! Eine Bestätigungs wurde an Ihre E-Mail-Adresse gesendet.', 'Schließen', {
+  
+      this.snackBar.open('Registrierung erfolgreich! Eine Bestätigungs-E-Mail wurde an Ihre E-Mail-Adresse gesendet.', 'Schließen', {
         duration: 5000,
       });
+      
       this.errorMessage = null;
-      this.userDataArray.push({ email, fullName });
-      // setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000)
-      ;
+      console.log(fullName, email);
+  
+      // Call the addNewUser method with a single object, not an array
+      await this.userData.addNewUser({ fullName, email });
+  
+      // Navigate to the profile creation page
+      setTimeout(() => this.router.navigate(['/create-profile'], { queryParams: { name: fullName }}), 2000);
     } catch (error) {
       if (error instanceof FirebaseError) {
         this.snackBar.open('Ein Fehler ist bei der Registrierung aufgetreten. Bitte versuchen Sie es erneut.', 'Schließen', {
@@ -69,6 +75,7 @@ export class RegisterComponent {
       }
     }
   }
+  
 
   hideError() {
     this.errorMessage = null;
